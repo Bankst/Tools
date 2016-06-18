@@ -1,0 +1,12 @@
+using(ScriptAPI)
+{
+count = AddByte("WorldCount");
+for(i=0; i<count; i++)
+{
+		AddByte("WorldID");
+		AddField("WorldName",16);
+		AddByte("WorldStatus");
+}
+
+
+}

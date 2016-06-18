@@ -1,0 +1,11 @@
+using(ScriptAPI)
+{
+AddByte("Slot");
+	AddField("Name",16);
+	AddInt("unk");
+Job =	AddByte("Job");
+		AddByte("HairID");
+	AddByte("HairColorID");
+	AddByte("FaceID");
+
+}

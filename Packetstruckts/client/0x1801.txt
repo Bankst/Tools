@@ -1,0 +1,6 @@
+using(ScriptAPI)
+{
+AddUShort("AccID");
+	AddField("CharName",20);
+	AddField("ClientHash",1568);
+}

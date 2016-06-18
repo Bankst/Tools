@@ -1,0 +1,67 @@
+using(ScriptAPI)
+{
+	AddUShort("mapobjectID");
+	Count = AddByte("ObjectCouunt");
+	AddField("CharacterName",20);
+	AddInt("PosX");
+	AddInt("PosY");
+	AddByte("Rotation");
+	
+	characterstate = AddByte("CharacterState");
+	AddByte("ClassID");
+	
+	if(characterstate != 5 && characterstate != 4)
+	{
+		//Look Info
+		AddByte("Male");
+		AddByte("hairID");
+		AddByte("HairColor");
+		AddByte("FaceID");
+		
+		AddUShort("Helm");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+		AddUShort("unk");
+			AddUShort("unk");
+			AddUShort("unk");
+			AddUShort("unk");
+			AddUShort("unk");
+			AddUShort("unk");
+			AddUShort("unk");
+	}
+    else
+	{
+	AddField("house",84);
+	
+	
+	}
+
+	    AddByte("Refment");
+	    AddByte("Refment");
+	
+	AddUShort("unk");
+		AddUShort("unk");
+	
+		AddUShort("emote");
+	
+		AddUShort("unk");
+	AddInt("titel");
+	AddField("unk",112);
+	AddInt("Killpoin");
+	AddByte("unk");
+	AddByte("isinacademy");
+	AddByte("autopickup");
+	AddByte("CharacterLevel");
+	
+}

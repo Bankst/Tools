@@ -1,0 +1,12 @@
+using(ScriptAPI)
+{
+	AddShort("MapObjectID");
+	AddByte("visibel");
+	AddShort("NPCID");
+	AddInt("PosX");
+	AddInt("PosY");
+	AddByte("Rot");
+	AddByte("Type");
+	AddField("BuffArray",131);
+	
+}

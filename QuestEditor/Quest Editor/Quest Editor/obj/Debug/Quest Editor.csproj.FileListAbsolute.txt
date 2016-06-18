@@ -1,0 +1,12 @@
+c:\users\alex\documents\visual studio 2013\Projects\Quest Editor\Quest Editor\obj\Debug\Quest Editor.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\Quest Editor\Quest Editor\bin\Debug\QuestEditor.dll.config
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\Quest Editor\Quest Editor\bin\Debug\QuestEditor.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\Quest Editor\Quest Editor\bin\Debug\QuestEditor.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\Quest Editor\Quest Editor\obj\Debug\QuestEditor.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\Quest Editor\Quest Editor\obj\Debug\QuestEditor.pdb
+C:\Users\Gothic\Desktop\DragonFiesta_Tools\QuestEditor\Quest Editor\Quest Editor\bin\Debug\QuestEditor.dll.config
+C:\Users\Gothic\Desktop\DragonFiesta_Tools\QuestEditor\Quest Editor\Quest Editor\bin\Debug\QuestEditor.dll
+C:\Users\Gothic\Desktop\DragonFiesta_Tools\QuestEditor\Quest Editor\Quest Editor\bin\Debug\QuestEditor.pdb
+C:\Users\Gothic\Desktop\DragonFiesta_Tools\QuestEditor\Quest Editor\Quest Editor\obj\Debug\Quest Editor.csprojResolveAssemblyReference.cache
+C:\Users\Gothic\Desktop\DragonFiesta_Tools\QuestEditor\Quest Editor\Quest Editor\obj\Debug\QuestEditor.dll
+C:\Users\Gothic\Desktop\DragonFiesta_Tools\QuestEditor\Quest Editor\Quest Editor\obj\Debug\QuestEditor.pdb

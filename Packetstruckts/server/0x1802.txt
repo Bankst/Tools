@@ -1,0 +1,69 @@
+using (ScriptAPI)
+{
+	AddUShort("CharID Or MapID");
+	AddLong("exp");
+	AddLong("NextExpForLevel");
+	
+	AddUInt("BaseSTR");
+	AddUInt("FullSTR");
+	
+	AddUInt("BaseEND");
+	AddUInt("FullEND");
+	
+	AddUInt("BaseDEX");
+	AddUInt("FullDEX");
+	
+	AddUInt("BaseINT");
+	AddUInt("FullINT");
+	
+	
+	AddUInt("wizdom?");
+	AddUShort("unk");
+	AddUShort("unk");
+	
+	
+	AddUInt("BaseSPR");
+	AddUInt("FullSPR");
+	
+	AddUInt("BaseDmgMin");
+	AddUInt("BaseDmgMax");
+	
+	AddUInt("BasemagicDmgMin");
+	AddUInt("BasemagicDmgMax");
+	
+	AddUInt("BaseDef");
+	AddUInt("increased def (e.g. buffs)");
+	
+	AddUInt("BaseAiam");
+	AddUInt("increasedAiam");
+	
+	AddUInt("BaseEvasion");
+	AddUInt("increasedEvasion");
+	
+	AddUInt("increaseddmgmin");
+	AddUInt("increaseddmgmax");
+	AddUInt("increasedmagicdmgmin");
+	AddUInt("increasedmagicdmgmax");
+	AddUInt("normalmagicdef");
+	AddUInt("increased magicdef");
+	
+	AddInt("unk");
+	AddInt("unk");
+	AddInt("unk");
+	AddInt("unk");
+	
+	
+	AddUInt("MaxHP");
+	AddUInt("MaxSP");
+	
+	AddInt("unk");
+	AddInt("unk");
+	
+	AddUInt("MaxSPStones");
+	AddUInt("MaxSPStones");
+	
+	AddField("buffs",64);
+	
+	AddInt("PosX");
+	AddInt("PosY");
+}

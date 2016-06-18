@@ -1,0 +1,10 @@
+using(ScriptAPI)
+{
+count = AddUShort("Count");
+	AddUShort("unk");
+	for(i=0; i<count; i++)
+	{
+		AddByte("Slot");
+		AddUShort("ItemID");
+	}
+}

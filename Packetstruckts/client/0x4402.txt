@@ -1,0 +1,6 @@
+using(ScriptAPI)
+{
+AddShort("QuestID");
+	AddByte("unk");
+	AddByte("Answer?");
+}

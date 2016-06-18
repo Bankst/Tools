@@ -1,0 +1,11 @@
+using(ScriptAPI)
+{
+    AddUShort("MapID");
+	AddInt("X");
+	AddInt("Y");
+	AddField("IP",16);
+	AddUShort("Port");
+	AddByte("Unk1");
+	AddByte("Unk2");
+	
+}

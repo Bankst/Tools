@@ -1,0 +1,25 @@
+using (ScriptAPI) {
+count = AddByte("charcount");
+for(i=0; i<count; i++)
+        {
+		AddUShort("objectID");
+		AddByte("unk");
+		AddUShort("Entry");
+		AddInt("posx");
+		AddInt("posy");
+		AddByte("rot");
+	    Gate = AddByte("IsGATE2");
+		if(Gate == 1)
+		{
+	
+	AddField("GateName",12);
+			
+			AddField("unk",121);
+	
+	}
+	else
+		{
+			AddField("buff2",133);
+		}
+	}
+}

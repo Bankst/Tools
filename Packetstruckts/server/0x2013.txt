@@ -1,0 +1,6 @@
+using(ScriptAPI)
+{
+	AddUShort("mapobjID");
+	AddInt("mewcurrx");
+	AddInt("newcurrx");
+}

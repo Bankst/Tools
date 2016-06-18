@@ -1,0 +1,288 @@
+using(ScriptAPI)
+{
+ItemCount = AddByte("ItemCount");
+PacketType = AddByte("PacketType");
+
+
+
+if(PacketType == 9)
+{
+	StartNode("InventoryList");
+	AddByte("unk");
+	for(i = 0; i < ItemCount; i++)
+	{
+		StartNode("ItemBaseData");
+		AddByte("Lenght");
+		AddByte("Slot");
+		AddByte("Status");
+		ItemID = AddUShort("ItemID");
+		twohand = IsItemTwoHand(ItemID);
+		ItemSlot = GetEquipTypeByItemID(ItemID);
+		EndNode(false);
+   		if(ItemSlot != 0 && ItemSlot != 4)
+		{		
+		if(ItemSlot == 1)
+		{
+		StartNode("Normal");
+		AddByte("Refiment");
+		AddUInt("Exptime?");
+		AddUInt("Times?");
+		AddUShort("Unk");
+		EndNode(false);
+		}
+		else if(ItemSlot == 2)
+		{
+		StartNode("Helm");
+		AddField("unk");
+		AddByte("Refiment?");			
+		EndNode(false);
+		}
+		else if(ItemSlot == 3)
+		{
+		StartNode("UnkownItemType");
+		EndNode(false);
+		}
+		else if(ItemSlot == 6)
+		{
+		StartNode("Necklace");
+		AddUInt("ExpTime");
+		AddUInt("Time?");
+		AddByte("Refiment");
+		
+		AddUShort("Downgrades");
+		AddUShort("STR");
+		AddUShort("END");
+		AddUShort("DEX");
+		AddUShort("INT");
+		AddUShort("SPR");
+		EndNode(false);
+    	}		
+		else if(ItemSlot == 7)
+		{
+		StartNode("Amor");
+		AddByte("Refiment");
+		AddUInt("Exptime?");
+		AddUInt("Times?");
+		AddUShort("Unk");
+		EndNode(false);
+    	}		
+		else if(ItemSlot == 8)
+		{
+		StartNode("CustomeArmor");
+		AddUInt("unk");
+		AddUInt("Unk");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 9)
+		{
+		StartNode("Wing");
+		StartNode("WingsType");
+		AddUInt("ExpTime");
+		AddUInt("Time?");
+		EndNode(false);
+    	}		
+		else if(ItemSlot == 10)
+		{
+		if(twohand)
+		{
+		StartNode("twohandWeapon");
+		AddByte("Refement");
+		AddUShort("unk");
+		AddUInt("Unk");
+		AddUShort("Nr1.MobID");
+		AddUInt("KillCount");
+		AddUShort("Nr2.MobID");
+		AddUInt("KillCount");
+		AddUShort("Nr3.MobID");
+		AddUInt("KillCount");
+		AddUShort("unk");
+		AddField("lencencename",16);
+		AddUInt("ExpTime");
+		AddByte("unk");
+		EndNode(false);	
+		}
+    	else
+		{
+		StartNode("OnhandWeapon");
+		AddByte("Refiment");
+		AddUInt("Exptime?");
+		AddUInt("Times?");
+		AddUShort("Unk");
+		EndNode(false);	
+		}
+		}			
+		else if(ItemSlot == 11)
+		{
+		StartNode("Shield");
+		AddUInt("SkinDuarbility");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 12)
+		{
+		if(twohand)
+		{
+		StartNode("twohandWeapon");
+		AddByte("Refement");
+		AddUShort("unk");
+		AddUInt("Unk");
+		AddUShort("Nr1.MobID");
+		AddUInt("KillCount");
+		AddUShort("Nr2.MobID");
+		AddUInt("KillCount");
+		AddUShort("Nr3.MobID");
+		AddUInt("KillCount");
+		AddUShort("unk");
+		AddField("lencencename",16);
+		AddUInt("ExpTime");
+		AddByte("unk");
+		EndNode(false);	
+		}
+    	else
+		{
+		StartNode("OnhandWeapon");
+		AddByte("Refiment");
+		AddUInt("Exptime?");
+		AddUInt("Times?");
+		AddUShort("Unk");
+		EndNode(false);	
+		}
+		}			
+		else if(ItemSlot == 14)
+		{
+		StartNode("CustomeWeappon");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 15)
+		{
+		StartNode("Ring");
+		AddUInt("ExpTime");
+		AddUInt("Time?");
+	
+		AddByte("Refment");
+		AddUShort("Downgrades");
+		AddUShort("STR");
+		AddUShort("END");
+		AddUShort("DEX");
+		AddUShort("INT");
+		AddUShort("SPR");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 16)
+		{
+		StartNode("AddStructLAter this is for ring2");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 18)
+		{
+		StartNode("AddStructLAter this is for Tail");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 19)
+		{
+		StartNode("Pants");
+		AddByte("Refiment");
+		AddUInt("Exptime?");
+		AddUInt("Times?");
+		AddUShort("Unk");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 20)
+		{
+		StartNode("Add Struct later for CustomePant");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 21)
+		{
+		StartNode("Boots");
+		AddByte("Refiment");
+		AddUInt("Exptime?");
+		AddUInt("Times?");
+		AddUShort("Unk");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 22)
+		{
+		StartNode("AddStructLAter this is for CustomeBoots");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 23)
+		{
+		StartNode("AddStructLAter this is for Earings");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 26)
+		{
+		StartNode("AddStructLAter this is for Glasses");
+		EndNode(false);	
+		}
+		else if(ItemSlot == 28)
+		{
+		StartNode("Pet");
+		AddByte("Refinment");
+		AddUShort("UNK");
+		AddUInt("ExpTime");
+		AddUInt("time?");
+		EndNode(false);	
+		}
+		else
+		{
+		StartNode("Default");
+		AddUInt("ExpTime");
+		AddUInt("Time?");
+		EndNode(false);
+		}
+		}
+		else
+		{
+		Itemclass = GetItemClassByID(ItemID);
+		
+		if(Itemclass == 15)
+		{
+		StartNode("PresentBox");	
+		EndNode(false);	
+		}
+		else if(Itemclass == 0)
+		{
+		StartNode("basedontype?");
+		AddByte("unk");
+		EndNode(false);	
+		}
+		else if(Itemclass == 10)
+		{
+	 	StartNode("Accessory");
+		 AddField("UnK",8);
+		EndNode(false);	
+		}
+		else if(Itemclass == 12)
+		{
+	 	StartNode("returnscroll");
+		AddField("UnK",4);
+	   	EndNode(false);
+		}
+		else
+		{			
+		StartNode("TodoPremiumItem");
+		EndNode(false);
+		}
+	}
+		}
+		}
+else if(PacketType == 8)
+{	
+StartNode("TodoEquippetList");
+}
+else if(PacketType == 12)
+{
+	StartNode("HouseList");
+	AddByte("unk");		
+	for(i = 0; i < ItemCount; i++)
+	{
+		StartNode("House");
+		AddByte("DataLenght");
+		AddByte("Slot");
+		AddByte("Unk");
+		AddUShort("ItemID");
+		AddUInt("ExpTime");				
+	}	
+}
+}

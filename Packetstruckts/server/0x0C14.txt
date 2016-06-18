@@ -1,0 +1,53 @@
+using (ScriptAPI) {
+AddUShort("randomid");
+count = AddByte("charcount");
+for(i=0; i<count; i++)
+        {
+AddUInt("charid");
+AddField("Name",20);
+AddUShort("lvl");
+AddByte("slot");
+AddPaddedString("mapname",      12);
+AddByte("namechange?");
+AddInt("randomseed");   
+        
+AddByte("job");
+AddByte("Hair");
+AddByte("Haircolor");
+AddByte("Face");
+        
+AddUShort("helm");
+AddUShort("weapon");
+AddUShort("non");
+AddUShort("none");
+AddUShort("armor");
+AddUShort("unk");
+AddUShort("pants");
+AddUShort("boots");
+AddUShort("custumepants");
+AddUShort("customamor");
+AddField("unk",6);
+AddUShort("glasses");
+AddUShort("custohelmr");
+AddField("unk",2);      
+AddUShort("customwaffe");
+AddUShort("Wing");
+AddField("unk",2);
+AddUShort("tail");
+AddUShort("pet");
+
+		
+        
+AddByte("upgradesbytes");
+AddByte("unk");
+AddByte("unk");
+        
+AddByte("unk");
+AddByte("unk");
+AddPaddedString("mapname",      0x0C);  
+        AddInt("pos");
+        AddInt("pos");
+        AddUShort("lol");
+AddField("unk",13);
+                        };
+}

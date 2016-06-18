@@ -1,0 +1,86 @@
+using(ScriptAPI)
+{
+count = AddUShort("QuestCount");
+for(i=0; i<count; i++)
+{
+QuestLenght = AddUShort("QuestLenght");
+	
+StartNode("QuestInfo");
+AddShort("unk");
+AddShort("QuestID");
+AddShort("TitleID");
+AddShort("DecryptionID");
+AddField("unk",7);	
+AddByte("MinLevel");
+AddByte("MaxLevel");
+AddByte("unk");
+AddShort("StartingNPC");
+AddField("unk",24);
+AddShort("PreQuest");
+AddField("unk",2);
+AddByte("MultiQuest");
+AddByte("NeedClass");
+AddField("unk",15);
+AddByte("NeedLevel");
+AddField("unk",6);
+EndNode(0);
+		
+
+StartNode("MobInfo");
+for (inxMob = 0; inxMob < 5; inxMob++)
+{
+StartNode("mob"+inxMob);
+AddByte("IsEnable");
+AddByte("IsNpc");
+AddUShort("MobID");
+AddByte("IsToKill");
+AddByte("Amount");
+EndNode(0);
+}
+EndNode(0);
+StartNode("ItemInfo");
+for (inxItem = 0; inxItem < 10; inxItem++)
+{
+StartNode("Item"+inxItem);
+AddByte("IsEnabled");
+AddByte("ItemType");
+AddUShort("ItemID");
+AddUShort("Ammount");
+EndNode(0);
+	}
+	AddField("ItemData",284);	
+EndNode(0);
+StartNode("RewardInfo");
+rewardlenght = 0;
+for (inxReward = 0; inxReward < 12; inxReward++)
+{
+StartNode("Reward"+inxReward);
+AddByte("RewardMethod");
+RewardType = AddByte("RewardType");
+if(RewardType == 2)
+{
+AddUShort("ItemID");
+AddUShort("Amount");
+AddField("unk",4);
+}
+else
+{
+AddLong("Exp/Fame");
+}
+	
+EndNode(0);      
+}  
+AddField("RewardData",18);
+EndNode(0);
+EndNode(0);			
+	
+
+StartScriptLenght = AddShort("StartScpLenght");
+FinishScriptLenght = AddShort("FinishScriptLenght");
+ActionLenght = AddShort("ActionLenght");
+	AddNulledString("StartScrript");
+	AddNulledString("FinishScript");
+	AddNulledString("ActionKrebs");
+	
+	}
+}

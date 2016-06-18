@@ -1,0 +1,16 @@
+using(ScriptAPI)
+{
+	AddUShort("unk");
+	 AddInt("CharacterID");
+	count = AddUShort("Count");
+	
+	for(i=0; i<count; i++)
+	{
+
+	AddUShort("SkillID");
+	AddInt("CooldDown");
+	AddUShort("Upgrades");
+	AddInt("Exp");
+	}
+
+}

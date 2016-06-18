@@ -1,0 +1,7 @@
+using(ScriptAPI)
+{
+	AddInt("currx");
+	AddInt("currx");
+	AddInt("mewcurrx");
+	AddInt("newcurrx");
+}

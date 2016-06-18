@@ -1,0 +1,11 @@
+BYTE Unknown (0x01)
+BYTE BarCount?
+BYTE Unknown (0x00)
+DWORD Unknown (0x1803)
+BYTE MaxBars
+BYTE ShowBars - 1 (0x00 = show 1 bar)
+:FOREACH MaxBars
+  BYTE Cells to show
+  BYTE BarId
+  BYTE Direction (0x00 = Horizontal, 0x01 = Vertical)
+:ENDFOR

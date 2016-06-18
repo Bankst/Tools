@@ -1,0 +1,12 @@
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\bin\Debug\QuestDataForm.exe.config
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\bin\Debug\QuestDataForm.exe
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\bin\Debug\QuestDataForm.pdb
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\bin\Debug\QuestDataSQLConverter.dll
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\bin\Debug\QuestDataSQLConverter.pdb
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\obj\Debug\QuestDataForm.csprojResolveAssemblyReference.cache
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\obj\Debug\QuestDataForm.Form1.resources
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\obj\Debug\QuestDataForm.Properties.Resources.resources
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\obj\Debug\QuestDataForm.csproj.GenerateResource.Cache
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\obj\Debug\QuestDataForm.exe
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\obj\Debug\QuestDataForm.pdb
+C:\Users\gothic\Documents\Visual Studio 2015\Projects\QuestDataSQLConverter\QuestDataForm\obj\Debug\QuestDataForm.DatabaseForm.resources

@@ -1,0 +1,35 @@
+using(ScriptAPI)
+{
+	AddInt("ID");
+	AddField("NAME",20);
+	AddByte("Slot");
+	AddByte("level");
+	AddLong("EXP");
+	AddInt("unk");
+	AddUShort("StonesHP");
+	AddUShort("StonesSP");
+	AddInt("HP");
+	AddInt("SP");
+	AddInt("unk");
+	AddInt("Fame");
+	AddLong("Money");
+
+	AddField("MapName",12);
+	
+	
+	AddInt("PosX");
+	AddInt("PosY");
+	AddByte("Rot");
+	AddByte("STrBoni");
+	AddByte("endBoni");
+	AddByte("Dexboni");
+	AddByte("IntBoni");
+	AddByte("SprBoni");
+	
+	AddUShort("unk");
+	
+	AddInt("Killpoints");
+	
+	AddField("Unk",7);
+	
+}

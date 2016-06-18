@@ -1,0 +1,26 @@
+using(ScriptAPI)
+{
+AddShort("QuestID");
+	DialogAction = AddInt("Action");
+	AddByte("unk");
+	if(DialogAction == 0x02)
+	{
+			StartNode("QuestDialog");
+		AddShort("QuestDialogID");
+		AddShort("DialogType");
+		AddShort("unk");
+		AddShort("NPCID");
+		EndNode(0);
+	
+	}
+    else if(DialogAction == 0x06)
+	{
+	StartNode("QuestAddDialog");
+				EndNode(0);
+	}
+    else if(DialogAction == 0x0A)
+	{
+		StartNode("QuestremoveDialog");
+				EndNode(0);
+	}
+}

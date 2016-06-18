@@ -1,0 +1,6 @@
+using(ScriptAPI)
+{
+AddField("AccountName",18);
+	AddInt("accID");
+	AddField("Check?",60);
+}

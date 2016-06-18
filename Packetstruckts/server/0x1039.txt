@@ -1,0 +1,7 @@
+using(ScriptAPI)
+{
+AddByte("Job/Gender");
+AddByte("HairID");
+AddByte("HairColor");
+AddByte("FaceID");
+}

@@ -1,0 +1,5 @@
+using(ScriptAPI)
+{
+AddField("ZoneIP",16);
+AddUShort("ZonePort");
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DatabaseSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SQLUser>sa</SQLUser>
+  <SQLPassword>123456</SQLPassword>
+  <SQLHost>Gothic-PC\SQLEXPRESS</SQLHost>
+  <SQLDB>questdb</SQLDB>
+</DatabaseSetting>

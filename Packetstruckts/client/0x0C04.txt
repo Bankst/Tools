@@ -1,0 +1,5 @@
+using(ScriptAPI)
+{
+Lenght = AddByte("Klo");
+AddField("VersionHash",Lenght);
+}

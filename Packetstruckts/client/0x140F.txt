@@ -1,0 +1,6 @@
+using(ScriptAPI)
+{
+AddByte("Slot");
+	AddField("Charname",16);
+	AddInt("Unk");
+}
