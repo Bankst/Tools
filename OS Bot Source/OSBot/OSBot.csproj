@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8BB2C01-786A-4780-A3D7-1C39B2775891}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OSBot</RootNamespace>
+    <AssemblyName>OSBot</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OSBot.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AppStartMethod.cs" />
+    <Compile Include="Cryptography\MD5Crypto.cs" />
+    <Compile Include="Cryptography\XorCrypto.cs" />
+    <Compile Include="Events\EmptyEvent.cs" />
+    <Compile Include="Events\MultiObjectEvent.cs" />
+    <Compile Include="Events\ObjectEvent.cs" />
+    <Compile Include="GUI\Controls\BotControl.xaml.cs">
+      <DependentUpon>BotControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\WorldControl.xaml.cs">
+      <DependentUpon>WorldControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\ConnectForm.xaml.cs">
+      <DependentUpon>ConnectForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Forms\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIManager.cs" />
+    <Compile Include="Logic\BotManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Characters\CharacterManager.cs" />
+    <Compile Include="Logic\ClientState.cs" />
+    <Compile Include="Logic\FiestaBot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Handlers\H3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\LoginError.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Tabs\BotTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Tokens\TokenManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Tokens\TokenResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Worlds\World.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Worlds\WorldManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Worlds\WorldStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\FiestaClient.cs" />
+    <Compile Include="Network\FiestaPacket.cs" />
+    <Compile Include="Network\GameOpCode.cs" />
+    <Compile Include="Network\Packet.cs" />
+    <Compile Include="Network\PacketHandlerMethodBase.cs" />
+    <Compile Include="Network\PacketManager.cs" />
+    <Compile Include="Network\SocketHelper.cs" />
+    <Compile Include="Network\TCPClient.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tools\ByteArray.cs" />
+    <Compile Include="Tools\ByteUtils.cs" />
+    <Compile Include="Tools\Pair.cs" />
+    <Compile Include="Tools\Reflector.cs" />
+    <Compile Include="Tools\StringHelper.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="GUI\Controls\BotControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Controls\WorldControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Forms\ConnectForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Forms\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

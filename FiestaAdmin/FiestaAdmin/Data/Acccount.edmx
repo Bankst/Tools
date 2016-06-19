@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AccountModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AccountModelStoreContainer">
+          <EntitySet Name="tChargeItem" EntityType="AccountModel.Store.tChargeItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tOrder" EntityType="AccountModel.Store.tOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tPasswordLog" EntityType="AccountModel.Store.tPasswordLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tSerialKey" EntityType="AccountModel.Store.tSerialKey" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tUser" EntityType="AccountModel.Store.tUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tUserAuth" EntityType="AccountModel.Store.tUserAuth" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tUserBlock" EntityType="AccountModel.Store.tUserBlock" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tUserOption" EntityType="AccountModel.Store.tUserOption" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__tChargeIt__order__534D60F1" Association="AccountModel.Store.FK__tChargeIt__order__534D60F1">
+            <End Role="tOrder" EntitySet="tOrder" />
+            <End Role="tChargeItem" EntitySet="tChargeItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tChargeIt__userN__52593CB8" Association="AccountModel.Store.FK__tChargeIt__userN__52593CB8">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tChargeItem" EntitySet="tChargeItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tOrder__toUserNo__4BAC3F29" Association="AccountModel.Store.FK__tOrder__toUserNo__4BAC3F29">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tOrder" EntitySet="tOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tOrder__userNo__4AB81AF0" Association="AccountModel.Store.FK__tOrder__userNo__4AB81AF0">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tOrder" EntitySet="tOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPassword__nUser__1273C1CD" Association="AccountModel.Store.FK__tPassword__nUser__1273C1CD">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tPasswordLog" EntitySet="tPasswordLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPassword__nUser__1CF15040" Association="AccountModel.Store.FK__tPassword__nUser__1CF15040">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tPasswordLog" EntitySet="tPasswordLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tSerialKe__userN__571DF1D5" Association="AccountModel.Store.FK__tSerialKe__userN__571DF1D5">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tSerialKey" EntitySet="tSerialKey" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserBloc__nUser__0AD2A005" Association="AccountModel.Store.FK__tUserBloc__nUser__0AD2A005">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tUserBlock" EntitySet="tUserBlock" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserBloc__nUser__1920BF5C" Association="AccountModel.Store.FK__tUserBloc__nUser__1920BF5C">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tUserBlock" EntitySet="tUserBlock" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserOpti__nUser__023D5A04" Association="AccountModel.Store.FK__tUserOpti__nUser__023D5A04">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tUserOption" EntitySet="tUserOption" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserOpti__nUser__173876EA" Association="AccountModel.Store.FK__tUserOpti__nUser__173876EA">
+            <End Role="tUser" EntitySet="tUser" />
+            <End Role="tUserOption" EntitySet="tUserOption" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tChargeItem">
+          <Key>
+            <PropertyRef Name="rowNo" />
+          </Key>
+          <Property Name="rowNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="userNo" Type="int" Nullable="false" />
+          <Property Name="orderNo" Type="int" Nullable="false" />
+          <Property Name="goodsNo" Type="int" Nullable="false" />
+          <Property Name="amount" Type="int" Nullable="false" />
+          <Property Name="registerDate" Type="datetime" Nullable="false" />
+          <Property Name="isDraw" Type="tinyint" Nullable="false" />
+          <Property Name="drawDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tOrder">
+          <Key>
+            <PropertyRef Name="orderNo" />
+          </Key>
+          <Property Name="orderNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="orderDate" Type="datetime" Nullable="false" />
+          <Property Name="orderType" Type="tinyint" Nullable="false" />
+          <Property Name="userNo" Type="int" Nullable="false" />
+          <Property Name="toUserNo" Type="int" />
+          <Property Name="goodsNo" Type="int" Nullable="false" />
+          <Property Name="goodsPrice" Type="int" Nullable="false" />
+          <Property Name="amount" Type="int" Nullable="false" />
+          <Property Name="discount" Type="int" Nullable="false" />
+          <Property Name="orderPrice" Type="int" Nullable="false" />
+          <Property Name="cashType" Type="tinyint" Nullable="false" />
+          <Property Name="isPay" Type="bit" Nullable="false" />
+          <Property Name="userIP" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tPasswordLog">
+          <Key>
+            <PropertyRef Name="nLogNo" />
+          </Key>
+          <Property Name="nLogNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nUserNo" Type="int" Nullable="false" />
+          <Property Name="sPrevPW" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="sCurrPW" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="sUserIP" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="dDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tSerialKey">
+          <Key>
+            <PropertyRef Name="userNo" />
+          </Key>
+          <Property Name="userNo" Type="int" Nullable="false" />
+          <Property Name="serialKey" Type="bigint" Nullable="false" />
+          <Property Name="registerDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tUser">
+          <Key>
+            <PropertyRef Name="nUserNo" />
+          </Key>
+          <Property Name="nUserNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sUserID" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="sUserPW" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="sUserName" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="bIsBlock" Type="bit" Nullable="false" />
+          <Property Name="bIsDelete" Type="bit" Nullable="false" />
+          <Property Name="nAuthID" Type="tinyint" Nullable="false" />
+          <Property Name="sUserIP" Type="nvarchar" MaxLength="30" />
+          <Property Name="dDate" Type="datetime" Nullable="false" />
+          <Property Name="tel_block" Type="tinyint" Nullable="false" />
+          <Property Name="COMMEND" Type="varchar" MaxLength="30" />
+          <Property Name="QUESTION" Type="varchar" MaxLength="50" />
+          <Property Name="ANSWER" Type="varchar" MaxLength="50" />
+          <Property Name="TIME" Type="datetime" />
+          <Property Name="QX" Type="char" MaxLength="1" />
+          <Property Name="JF" Type="int" Nullable="false" />
+          <Property Name="WAGES" Type="datetime" />
+          <Property Name="SPWD" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tUserAuth">
+          <Key>
+            <PropertyRef Name="nAuthID" />
+          </Key>
+          <Property Name="nAuthID" Type="tinyint" Nullable="false" />
+          <Property Name="sAuthName" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="bIsLoginAble" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tUserBlock">
+          <Key>
+            <PropertyRef Name="nBlockNo" />
+          </Key>
+          <Property Name="nBlockNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nUserNo" Type="int" Nullable="false" />
+          <Property Name="nType" Type="tinyint" Nullable="false" />
+          <Property Name="dBlockDate" Type="datetime" Nullable="false" />
+          <Property Name="nTimeValue" Type="int" Nullable="false" />
+          <Property Name="dEndDate" Type="datetime" Nullable="false" />
+          <Property Name="bStatus" Type="bit" Nullable="false" />
+          <Property Name="sComment" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tUserOption">
+          <Key>
+            <PropertyRef Name="nUserNo" />
+          </Key>
+          <Property Name="nUserNo" Type="int" Nullable="false" />
+          <Property Name="sEmail" Type="nvarchar" MaxLength="90" />
+          <Property Name="sJuminNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="sPhoneNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="nZipNo" Type="int" />
+          <Property Name="sAddress" Type="nvarchar" MaxLength="90" />
+          <Property Name="bIsMail" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__tChargeIt__order__534D60F1">
+          <End Role="tOrder" Type="AccountModel.Store.tOrder" Multiplicity="1" />
+          <End Role="tChargeItem" Type="AccountModel.Store.tChargeItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tOrder">
+              <PropertyRef Name="orderNo" />
+            </Principal>
+            <Dependent Role="tChargeItem">
+              <PropertyRef Name="orderNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tChargeIt__userN__52593CB8">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tChargeItem" Type="AccountModel.Store.tChargeItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tChargeItem">
+              <PropertyRef Name="userNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tOrder__toUserNo__4BAC3F29">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="0..1" />
+          <End Role="tOrder" Type="AccountModel.Store.tOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tOrder">
+              <PropertyRef Name="toUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tOrder__userNo__4AB81AF0">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tOrder" Type="AccountModel.Store.tOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tOrder">
+              <PropertyRef Name="userNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPassword__nUser__1273C1CD">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tPasswordLog" Type="AccountModel.Store.tPasswordLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tPasswordLog">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPassword__nUser__1CF15040">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tPasswordLog" Type="AccountModel.Store.tPasswordLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tPasswordLog">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tSerialKe__userN__571DF1D5">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tSerialKey" Type="AccountModel.Store.tSerialKey" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tSerialKey">
+              <PropertyRef Name="userNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserBloc__nUser__0AD2A005">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tUserBlock" Type="AccountModel.Store.tUserBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserBlock">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserBloc__nUser__1920BF5C">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tUserBlock" Type="AccountModel.Store.tUserBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserBlock">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserOpti__nUser__023D5A04">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tUserOption" Type="AccountModel.Store.tUserOption" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserOption">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserOpti__nUser__173876EA">
+          <End Role="tUser" Type="AccountModel.Store.tUser" Multiplicity="1" />
+          <End Role="tUserOption" Type="AccountModel.Store.tUserOption" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserOption">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AccountModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AccountEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tChargeItems" EntityType="AccountModel.tChargeItem" />
+          <EntitySet Name="tOrders" EntityType="AccountModel.tOrder" />
+          <EntitySet Name="tPasswordLogs" EntityType="AccountModel.tPasswordLog" />
+          <EntitySet Name="tSerialKeys" EntityType="AccountModel.tSerialKey" />
+          <EntitySet Name="tUsers" EntityType="AccountModel.tUser" />
+          <EntitySet Name="tUserAuths" EntityType="AccountModel.tUserAuth" />
+          <EntitySet Name="tUserBlocks" EntityType="AccountModel.tUserBlock" />
+          <EntitySet Name="tUserOptions" EntityType="AccountModel.tUserOption" />
+          <AssociationSet Name="FK__tChargeIt__order__534D60F1" Association="AccountModel.FK__tChargeIt__order__534D60F1">
+            <End Role="tOrder" EntitySet="tOrders" />
+            <End Role="tChargeItem" EntitySet="tChargeItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tChargeIt__userN__52593CB8" Association="AccountModel.FK__tChargeIt__userN__52593CB8">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tChargeItem" EntitySet="tChargeItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tOrder__toUserNo__4BAC3F29" Association="AccountModel.FK__tOrder__toUserNo__4BAC3F29">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tOrder" EntitySet="tOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tOrder__userNo__4AB81AF0" Association="AccountModel.FK__tOrder__userNo__4AB81AF0">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tOrder" EntitySet="tOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPassword__nUser__1273C1CD" Association="AccountModel.FK__tPassword__nUser__1273C1CD">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tPasswordLog" EntitySet="tPasswordLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPassword__nUser__1CF15040" Association="AccountModel.FK__tPassword__nUser__1CF15040">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tPasswordLog" EntitySet="tPasswordLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tSerialKe__userN__571DF1D5" Association="AccountModel.FK__tSerialKe__userN__571DF1D5">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tSerialKey" EntitySet="tSerialKeys" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserBloc__nUser__0AD2A005" Association="AccountModel.FK__tUserBloc__nUser__0AD2A005">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tUserBlock" EntitySet="tUserBlocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserBloc__nUser__1920BF5C" Association="AccountModel.FK__tUserBloc__nUser__1920BF5C">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tUserBlock" EntitySet="tUserBlocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserOpti__nUser__023D5A04" Association="AccountModel.FK__tUserOpti__nUser__023D5A04">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tUserOption" EntitySet="tUserOptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tUserOpti__nUser__173876EA" Association="AccountModel.FK__tUserOpti__nUser__173876EA">
+            <End Role="tUser" EntitySet="tUsers" />
+            <End Role="tUserOption" EntitySet="tUserOptions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tChargeItem">
+          <Key>
+            <PropertyRef Name="rowNo" />
+          </Key>
+          <Property Name="rowNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userNo" Type="Int32" Nullable="false" />
+          <Property Name="orderNo" Type="Int32" Nullable="false" />
+          <Property Name="goodsNo" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Int32" Nullable="false" />
+          <Property Name="registerDate" Type="DateTime" Nullable="false" />
+          <Property Name="isDraw" Type="Byte" Nullable="false" />
+          <Property Name="drawDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tOrder" Relationship="AccountModel.FK__tChargeIt__order__534D60F1" FromRole="tChargeItem" ToRole="tOrder" />
+          <NavigationProperty Name="tUser" Relationship="AccountModel.FK__tChargeIt__userN__52593CB8" FromRole="tChargeItem" ToRole="tUser" />
+        </EntityType>
+        <EntityType Name="tOrder">
+          <Key>
+            <PropertyRef Name="orderNo" />
+          </Key>
+          <Property Name="orderNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderDate" Type="DateTime" Nullable="false" />
+          <Property Name="orderType" Type="Byte" Nullable="false" />
+          <Property Name="userNo" Type="Int32" Nullable="false" />
+          <Property Name="toUserNo" Type="Int32" />
+          <Property Name="goodsNo" Type="Int32" Nullable="false" />
+          <Property Name="goodsPrice" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Int32" Nullable="false" />
+          <Property Name="discount" Type="Int32" Nullable="false" />
+          <Property Name="orderPrice" Type="Int32" Nullable="false" />
+          <Property Name="cashType" Type="Byte" Nullable="false" />
+          <Property Name="isPay" Type="Boolean" Nullable="false" />
+          <Property Name="userIP" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tChargeItems" Relationship="AccountModel.FK__tChargeIt__order__534D60F1" FromRole="tOrder" ToRole="tChargeItem" />
+          <NavigationProperty Name="tUser" Relationship="AccountModel.FK__tOrder__toUserNo__4BAC3F29" FromRole="tOrder" ToRole="tUser" />
+          <NavigationProperty Name="tUser1" Relationship="AccountModel.FK__tOrder__userNo__4AB81AF0" FromRole="tOrder" ToRole="tUser" />
+        </EntityType>
+        <EntityType Name="tPasswordLog">
+          <Key>
+            <PropertyRef Name="nLogNo" />
+          </Key>
+          <Property Name="nLogNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nUserNo" Type="Int32" Nullable="false" />
+          <Property Name="sPrevPW" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="sCurrPW" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="sUserIP" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="dDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tUser" Relationship="AccountModel.FK__tPassword__nUser__1273C1CD" FromRole="tPasswordLog" ToRole="tUser" />
+          <NavigationProperty Name="tUser1" Relationship="AccountModel.FK__tPassword__nUser__1CF15040" FromRole="tPasswordLog" ToRole="tUser" />
+        </EntityType>
+        <EntityType Name="tSerialKey">
+          <Key>
+            <PropertyRef Name="userNo" />
+          </Key>
+          <Property Name="userNo" Type="Int32" Nullable="false" />
+          <Property Name="serialKey" Type="Int64" Nullable="false" />
+          <Property Name="registerDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tUser" Relationship="AccountModel.FK__tSerialKe__userN__571DF1D5" FromRole="tSerialKey" ToRole="tUser" />
+        </EntityType>
+        <EntityType Name="tUser">
+          <Key>
+            <PropertyRef Name="nUserNo" />
+          </Key>
+          <Property Name="nUserNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sUserID" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="sUserPW" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="sUserName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="bIsBlock" Type="Boolean" Nullable="false" />
+          <Property Name="bIsDelete" Type="Boolean" Nullable="false" />
+          <Property Name="nAuthID" Type="Byte" Nullable="false" />
+          <Property Name="sUserIP" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="dDate" Type="DateTime" Nullable="false" />
+          <Property Name="tel_block" Type="Byte" Nullable="false" />
+          <Property Name="COMMEND" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="QUESTION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ANSWER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TIME" Type="DateTime" />
+          <Property Name="QX" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="JF" Type="Int32" Nullable="false" />
+          <Property Name="WAGES" Type="DateTime" />
+          <Property Name="SPWD" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tChargeItems" Relationship="AccountModel.FK__tChargeIt__userN__52593CB8" FromRole="tUser" ToRole="tChargeItem" />
+          <NavigationProperty Name="tOrders" Relationship="AccountModel.FK__tOrder__toUserNo__4BAC3F29" FromRole="tUser" ToRole="tOrder" />
+          <NavigationProperty Name="tOrders1" Relationship="AccountModel.FK__tOrder__userNo__4AB81AF0" FromRole="tUser" ToRole="tOrder" />
+          <NavigationProperty Name="tPasswordLogs" Relationship="AccountModel.FK__tPassword__nUser__1273C1CD" FromRole="tUser" ToRole="tPasswordLog" />
+          <NavigationProperty Name="tPasswordLogs1" Relationship="AccountModel.FK__tPassword__nUser__1CF15040" FromRole="tUser" ToRole="tPasswordLog" />
+          <NavigationProperty Name="tSerialKey" Relationship="AccountModel.FK__tSerialKe__userN__571DF1D5" FromRole="tUser" ToRole="tSerialKey" />
+          <NavigationProperty Name="tUserBlocks" Relationship="AccountModel.FK__tUserBloc__nUser__0AD2A005" FromRole="tUser" ToRole="tUserBlock" />
+          <NavigationProperty Name="tUserBlocks1" Relationship="AccountModel.FK__tUserBloc__nUser__1920BF5C" FromRole="tUser" ToRole="tUserBlock" />
+          <NavigationProperty Name="tUserOption" Relationship="AccountModel.FK__tUserOpti__nUser__023D5A04" FromRole="tUser" ToRole="tUserOption" />
+          <NavigationProperty Name="tUserOption1" Relationship="AccountModel.FK__tUserOpti__nUser__173876EA" FromRole="tUser" ToRole="tUserOption" />
+        </EntityType>
+        <EntityType Name="tUserAuth">
+          <Key>
+            <PropertyRef Name="nAuthID" />
+          </Key>
+          <Property Name="nAuthID" Type="Byte" Nullable="false" />
+          <Property Name="sAuthName" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="bIsLoginAble" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tUserBlock">
+          <Key>
+            <PropertyRef Name="nBlockNo" />
+          </Key>
+          <Property Name="nBlockNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nUserNo" Type="Int32" Nullable="false" />
+          <Property Name="nType" Type="Byte" Nullable="false" />
+          <Property Name="dBlockDate" Type="DateTime" Nullable="false" />
+          <Property Name="nTimeValue" Type="Int32" Nullable="false" />
+          <Property Name="dEndDate" Type="DateTime" Nullable="false" />
+          <Property Name="bStatus" Type="Boolean" Nullable="false" />
+          <Property Name="sComment" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tUser" Relationship="AccountModel.FK__tUserBloc__nUser__0AD2A005" FromRole="tUserBlock" ToRole="tUser" />
+          <NavigationProperty Name="tUser1" Relationship="AccountModel.FK__tUserBloc__nUser__1920BF5C" FromRole="tUserBlock" ToRole="tUser" />
+        </EntityType>
+        <EntityType Name="tUserOption">
+          <Key>
+            <PropertyRef Name="nUserNo" />
+          </Key>
+          <Property Name="nUserNo" Type="Int32" Nullable="false" />
+          <Property Name="sEmail" Type="String" MaxLength="90" Unicode="true" FixedLength="false" />
+          <Property Name="sJuminNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="sPhoneNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="nZipNo" Type="Int32" />
+          <Property Name="sAddress" Type="String" MaxLength="90" Unicode="true" FixedLength="false" />
+          <Property Name="bIsMail" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tUser" Relationship="AccountModel.FK__tUserOpti__nUser__023D5A04" FromRole="tUserOption" ToRole="tUser" />
+          <NavigationProperty Name="tUser1" Relationship="AccountModel.FK__tUserOpti__nUser__173876EA" FromRole="tUserOption" ToRole="tUser" />
+        </EntityType>
+        <Association Name="FK__tChargeIt__order__534D60F1">
+          <End Role="tOrder" Type="AccountModel.tOrder" Multiplicity="1" />
+          <End Role="tChargeItem" Type="AccountModel.tChargeItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tOrder">
+              <PropertyRef Name="orderNo" />
+            </Principal>
+            <Dependent Role="tChargeItem">
+              <PropertyRef Name="orderNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tChargeIt__userN__52593CB8">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tChargeItem" Type="AccountModel.tChargeItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tChargeItem">
+              <PropertyRef Name="userNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tOrder__toUserNo__4BAC3F29">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="0..1" />
+          <End Role="tOrder" Type="AccountModel.tOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tOrder">
+              <PropertyRef Name="toUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tOrder__userNo__4AB81AF0">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tOrder" Type="AccountModel.tOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tOrder">
+              <PropertyRef Name="userNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPassword__nUser__1273C1CD">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tPasswordLog" Type="AccountModel.tPasswordLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tPasswordLog">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPassword__nUser__1CF15040">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tPasswordLog" Type="AccountModel.tPasswordLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tPasswordLog">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tSerialKe__userN__571DF1D5">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tSerialKey" Type="AccountModel.tSerialKey" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tSerialKey">
+              <PropertyRef Name="userNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserBloc__nUser__0AD2A005">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tUserBlock" Type="AccountModel.tUserBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserBlock">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserBloc__nUser__1920BF5C">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tUserBlock" Type="AccountModel.tUserBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserBlock">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserOpti__nUser__023D5A04">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tUserOption" Type="AccountModel.tUserOption" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserOption">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tUserOpti__nUser__173876EA">
+          <End Role="tUser" Type="AccountModel.tUser" Multiplicity="1" />
+          <End Role="tUserOption" Type="AccountModel.tUserOption" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tUser">
+              <PropertyRef Name="nUserNo" />
+            </Principal>
+            <Dependent Role="tUserOption">
+              <PropertyRef Name="nUserNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AccountModelStoreContainer" CdmEntityContainer="AccountEntities">
+          <EntitySetMapping Name="tChargeItems"><EntityTypeMapping TypeName="AccountModel.tChargeItem"><MappingFragment StoreEntitySet="tChargeItem">
+            <ScalarProperty Name="rowNo" ColumnName="rowNo" />
+            <ScalarProperty Name="userNo" ColumnName="userNo" />
+            <ScalarProperty Name="orderNo" ColumnName="orderNo" />
+            <ScalarProperty Name="goodsNo" ColumnName="goodsNo" />
+            <ScalarProperty Name="amount" ColumnName="amount" />
+            <ScalarProperty Name="registerDate" ColumnName="registerDate" />
+            <ScalarProperty Name="isDraw" ColumnName="isDraw" />
+            <ScalarProperty Name="drawDate" ColumnName="drawDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tOrders"><EntityTypeMapping TypeName="AccountModel.tOrder"><MappingFragment StoreEntitySet="tOrder">
+            <ScalarProperty Name="orderNo" ColumnName="orderNo" />
+            <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+            <ScalarProperty Name="orderType" ColumnName="orderType" />
+            <ScalarProperty Name="userNo" ColumnName="userNo" />
+            <ScalarProperty Name="toUserNo" ColumnName="toUserNo" />
+            <ScalarProperty Name="goodsNo" ColumnName="goodsNo" />
+            <ScalarProperty Name="goodsPrice" ColumnName="goodsPrice" />
+            <ScalarProperty Name="amount" ColumnName="amount" />
+            <ScalarProperty Name="discount" ColumnName="discount" />
+            <ScalarProperty Name="orderPrice" ColumnName="orderPrice" />
+            <ScalarProperty Name="cashType" ColumnName="cashType" />
+            <ScalarProperty Name="isPay" ColumnName="isPay" />
+            <ScalarProperty Name="userIP" ColumnName="userIP" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tPasswordLogs"><EntityTypeMapping TypeName="AccountModel.tPasswordLog"><MappingFragment StoreEntitySet="tPasswordLog">
+            <ScalarProperty Name="nLogNo" ColumnName="nLogNo" />
+            <ScalarProperty Name="nUserNo" ColumnName="nUserNo" />
+            <ScalarProperty Name="sPrevPW" ColumnName="sPrevPW" />
+            <ScalarProperty Name="sCurrPW" ColumnName="sCurrPW" />
+            <ScalarProperty Name="sUserIP" ColumnName="sUserIP" />
+            <ScalarProperty Name="dDate" ColumnName="dDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tSerialKeys"><EntityTypeMapping TypeName="AccountModel.tSerialKey"><MappingFragment StoreEntitySet="tSerialKey">
+            <ScalarProperty Name="userNo" ColumnName="userNo" />
+            <ScalarProperty Name="serialKey" ColumnName="serialKey" />
+            <ScalarProperty Name="registerDate" ColumnName="registerDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tUsers"><EntityTypeMapping TypeName="AccountModel.tUser"><MappingFragment StoreEntitySet="tUser">
+            <ScalarProperty Name="nUserNo" ColumnName="nUserNo" />
+            <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+            <ScalarProperty Name="sUserPW" ColumnName="sUserPW" />
+            <ScalarProperty Name="sUserName" ColumnName="sUserName" />
+            <ScalarProperty Name="bIsBlock" ColumnName="bIsBlock" />
+            <ScalarProperty Name="bIsDelete" ColumnName="bIsDelete" />
+            <ScalarProperty Name="nAuthID" ColumnName="nAuthID" />
+            <ScalarProperty Name="sUserIP" ColumnName="sUserIP" />
+            <ScalarProperty Name="dDate" ColumnName="dDate" />
+            <ScalarProperty Name="tel_block" ColumnName="tel_block" />
+            <ScalarProperty Name="COMMEND" ColumnName="COMMEND" />
+            <ScalarProperty Name="QUESTION" ColumnName="QUESTION" />
+            <ScalarProperty Name="ANSWER" ColumnName="ANSWER" />
+            <ScalarProperty Name="TIME" ColumnName="TIME" />
+            <ScalarProperty Name="QX" ColumnName="QX" />
+            <ScalarProperty Name="JF" ColumnName="JF" />
+            <ScalarProperty Name="WAGES" ColumnName="WAGES" />
+            <ScalarProperty Name="SPWD" ColumnName="SPWD" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tUserAuths"><EntityTypeMapping TypeName="AccountModel.tUserAuth"><MappingFragment StoreEntitySet="tUserAuth">
+            <ScalarProperty Name="nAuthID" ColumnName="nAuthID" />
+            <ScalarProperty Name="sAuthName" ColumnName="sAuthName" />
+            <ScalarProperty Name="bIsLoginAble" ColumnName="bIsLoginAble" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tUserBlocks"><EntityTypeMapping TypeName="AccountModel.tUserBlock"><MappingFragment StoreEntitySet="tUserBlock">
+            <ScalarProperty Name="nBlockNo" ColumnName="nBlockNo" />
+            <ScalarProperty Name="nUserNo" ColumnName="nUserNo" />
+            <ScalarProperty Name="nType" ColumnName="nType" />
+            <ScalarProperty Name="dBlockDate" ColumnName="dBlockDate" />
+            <ScalarProperty Name="nTimeValue" ColumnName="nTimeValue" />
+            <ScalarProperty Name="dEndDate" ColumnName="dEndDate" />
+            <ScalarProperty Name="bStatus" ColumnName="bStatus" />
+            <ScalarProperty Name="sComment" ColumnName="sComment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tUserOptions"><EntityTypeMapping TypeName="AccountModel.tUserOption"><MappingFragment StoreEntitySet="tUserOption">
+            <ScalarProperty Name="nUserNo" ColumnName="nUserNo" />
+            <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+            <ScalarProperty Name="sJuminNo" ColumnName="sJuminNo" />
+            <ScalarProperty Name="sPhoneNo" ColumnName="sPhoneNo" />
+            <ScalarProperty Name="nZipNo" ColumnName="nZipNo" />
+            <ScalarProperty Name="sAddress" ColumnName="sAddress" />
+            <ScalarProperty Name="bIsMail" ColumnName="bIsMail" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Acccount">
+        <EntityTypeShape EntityType="AccountModel.tChargeItem" Width="1.5" PointX="5.25" PointY="10" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.tOrder" Width="1.5" PointX="3" PointY="7.375" Height="4.0956022135416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.tPasswordLog" Width="1.5" PointX="3" PointY="12.25" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.tSerialKey" Width="1.5" PointX="3" PointY="15.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.tUser" Width="1.5" PointX="0.75" PointY="9.125" Height="6.4032194010416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.tUserAuth" Width="1.5" PointX="3.375" PointY="0.75" Height="1.59568359375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.tUserBlock" Width="1.5" PointX="3" PointY="18.125" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccountModel.tUserOption" Width="1.5" PointX="3" PointY="21.75" Height="2.749492187499996" IsExpanded="true" />
+        <AssociationConnector Association="AccountModel.FK__tChargeIt__order__534D60F1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.735301106770834" />
+          <ConnectorPoint PointX="5.25" PointY="10.735301106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tChargeIt__userN__52593CB8" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.860301106770834" />
+          <ConnectorPoint PointX="5.25" PointY="11.860301106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tOrder__toUserNo__4BAC3F29" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.297801106770834" />
+          <ConnectorPoint PointX="3" PointY="10.297801106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tOrder__userNo__4AB81AF0" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.6489005533854169" />
+          <ConnectorPoint PointX="3" PointY="9.6489005533854169" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tPassword__nUser__1273C1CD" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.528595377604166" />
+          <ConnectorPoint PointX="3" PointY="13.528595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tPassword__nUser__1CF15040" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.826797688802083" />
+          <ConnectorPoint PointX="3" PointY="12.826797688802083" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tSerialKe__userN__571DF1D5" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="15.528219401041667" />
+          <ConnectorPoint PointX="1.5" PointY="16.408102713541666" />
+          <ConnectorPoint PointX="1.6197929166666667" PointY="16.408102713541666" />
+          <ConnectorPoint PointX="1.7864595833333332" PointY="16.408102713541666" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="16.408102713541666" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="16.408102713541666" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="16.408102713541666" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="16.408102713541666" />
+          <ConnectorPoint PointX="3" PointY="16.408102713541666" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tUserBloc__nUser__0AD2A005" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="15.528219401041667" />
+          <ConnectorPoint PointX="1.9062525" PointY="19.595896809895834" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="19.595896809895834" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="19.595896809895834" />
+          <ConnectorPoint PointX="3" PointY="19.595896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tUserBloc__nUser__1920BF5C" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.0937475" PointY="15.528219401041667" />
+          <ConnectorPoint PointX="1.0937475" PointY="18.829195904947916" />
+          <ConnectorPoint PointX="1.6197929166666667" PointY="18.829195904947916" />
+          <ConnectorPoint PointX="1.7864595833333332" PointY="18.829195904947916" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="18.829195904947916" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="18.829195904947916" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="18.829195904947916" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="18.829195904947916" />
+          <ConnectorPoint PointX="3" PointY="18.829195904947916" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tUserOpti__nUser__023D5A04" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.10937875" PointY="15.528219401041667" />
+          <ConnectorPoint PointX="2.10937875" PointY="23.124746093749998" />
+          <ConnectorPoint PointX="3" PointY="23.124746093749998" />
+        </AssociationConnector>
+        <AssociationConnector Association="AccountModel.FK__tUserOpti__nUser__173876EA" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.70312625" PointY="15.528219401041667" />
+          <ConnectorPoint PointX="1.70312625" PointY="22.406120546874998" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="22.406120546874998" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="22.406120546874998" />
+          <ConnectorPoint PointX="3" PointY="22.406120546874998" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

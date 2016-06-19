@@ -1,0 +1,1 @@
+﻿public delegate void ObjectEvent<pObject>(pObject Object);

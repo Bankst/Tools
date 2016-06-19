@@ -1,0 +1,4 @@
+SQLHost=.\SQLEXPRESS
+SQLUsername=sa
+SQLPassword=12345
+FirstStart=False

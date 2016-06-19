@@ -1,0 +1,138 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class LoginForm
+    Inherits System.Windows.Forms.Form
+
+    'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Wird vom Windows Form-Designer benötigt.
+    Private components As System.ComponentModel.IContainer
+
+    'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
+    'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
+    'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.OPTool = New System.Windows.Forms.Label()
+        Me.LoginID = New System.Windows.Forms.TextBox()
+        Me.LoginIDLabel = New System.Windows.Forms.Label()
+        Me.LoginPW = New System.Windows.Forms.TextBox()
+        Me.LoginPWLabel = New System.Windows.Forms.Label()
+        Me.Login = New System.Windows.Forms.Button()
+        Me.InfoTextBox = New System.Windows.Forms.TextBox()
+        Me.Info = New System.Windows.Forms.Label()
+        Me.SuspendLayout()
+        '
+        'OPTool
+        '
+        Me.OPTool.AutoSize = True
+        Me.OPTool.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OPTool.Location = New System.Drawing.Point(227, 30)
+        Me.OPTool.Name = "OPTool"
+        Me.OPTool.Size = New System.Drawing.Size(366, 31)
+        Me.OPTool.TabIndex = 0
+        Me.OPTool.Text = "OPTool Remake by Canic (c)"
+        '
+        'LoginID
+        '
+        Me.LoginID.Location = New System.Drawing.Point(382, 98)
+        Me.LoginID.Name = "LoginID"
+        Me.LoginID.Size = New System.Drawing.Size(136, 20)
+        Me.LoginID.TabIndex = 1
+        '
+        'LoginIDLabel
+        '
+        Me.LoginIDLabel.AutoSize = True
+        Me.LoginIDLabel.Location = New System.Drawing.Point(289, 101)
+        Me.LoginIDLabel.Name = "LoginIDLabel"
+        Me.LoginIDLabel.Size = New System.Drawing.Size(87, 13)
+        Me.LoginIDLabel.TabIndex = 2
+        Me.LoginIDLabel.Text = "Login Username:"
+        '
+        'LoginPW
+        '
+        Me.LoginPW.Location = New System.Drawing.Point(382, 134)
+        Me.LoginPW.Name = "LoginPW"
+        Me.LoginPW.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.LoginPW.Size = New System.Drawing.Size(136, 20)
+        Me.LoginPW.TabIndex = 4
+        '
+        'LoginPWLabel
+        '
+        Me.LoginPWLabel.AutoSize = True
+        Me.LoginPWLabel.Location = New System.Drawing.Point(289, 137)
+        Me.LoginPWLabel.Name = "LoginPWLabel"
+        Me.LoginPWLabel.Size = New System.Drawing.Size(85, 13)
+        Me.LoginPWLabel.TabIndex = 5
+        Me.LoginPWLabel.Text = "Login Password:"
+        '
+        'Login
+        '
+        Me.Login.Location = New System.Drawing.Point(478, 190)
+        Me.Login.Name = "Login"
+        Me.Login.Size = New System.Drawing.Size(75, 23)
+        Me.Login.TabIndex = 6
+        Me.Login.Text = "Login"
+        Me.Login.UseVisualStyleBackColor = True
+        '
+        'InfoTextBox
+        '
+        Me.InfoTextBox.Location = New System.Drawing.Point(12, 274)
+        Me.InfoTextBox.Multiline = True
+        Me.InfoTextBox.Name = "InfoTextBox"
+        Me.InfoTextBox.ReadOnly = True
+        Me.InfoTextBox.Size = New System.Drawing.Size(839, 171)
+        Me.InfoTextBox.TabIndex = 7
+        Me.InfoTextBox.Text = "OPTool Alpha 0.2 Welcome! Please log in!"
+        '
+        'Info
+        '
+        Me.Info.AutoSize = True
+        Me.Info.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Info.Location = New System.Drawing.Point(349, 245)
+        Me.Info.Name = "Info"
+        Me.Info.Size = New System.Drawing.Size(169, 26)
+        Me.Info.TabIndex = 8
+        Me.Info.Text = "Information Log:"
+        '
+        'LoginForm
+        '
+        Me.AcceptButton = Me.Login
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(863, 457)
+        Me.Controls.Add(Me.Info)
+        Me.Controls.Add(Me.InfoTextBox)
+        Me.Controls.Add(Me.Login)
+        Me.Controls.Add(Me.LoginPWLabel)
+        Me.Controls.Add(Me.LoginPW)
+        Me.Controls.Add(Me.LoginIDLabel)
+        Me.Controls.Add(Me.LoginID)
+        Me.Controls.Add(Me.OPTool)
+        Me.MaximizeBox = False
+        Me.Name = "LoginForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "OPTool"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents OPTool As System.Windows.Forms.Label
+    Friend WithEvents LoginID As System.Windows.Forms.TextBox
+    Friend WithEvents LoginIDLabel As System.Windows.Forms.Label
+    Friend WithEvents LoginPW As System.Windows.Forms.TextBox
+    Friend WithEvents LoginPWLabel As System.Windows.Forms.Label
+    Friend WithEvents Login As System.Windows.Forms.Button
+    Friend WithEvents InfoTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Info As System.Windows.Forms.Label
+
+End Class

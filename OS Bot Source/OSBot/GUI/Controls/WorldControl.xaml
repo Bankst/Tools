@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="OSBot.GUI.Controls.WorldControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="566" d:DesignWidth="758">
+    <Grid>
+        <GroupBox Header="World selection" Height="170" HorizontalAlignment="Left" Margin="10,10,0,0" Name="groupBox1" VerticalAlignment="Top" Width="208">
+            <Grid>
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="6,6,0,0" Name="ComboBox_WorldList" VerticalAlignment="Top" Width="184" />
+                <Label Content="ID:" Height="28" HorizontalAlignment="Left" Margin="6,35,0,0" Name="label1" VerticalAlignment="Top" Width="58" />
+                <Label Content="Name:" Height="28" HorizontalAlignment="Left" Margin="6,61,0,0" Name="label2" VerticalAlignment="Top" Width="58" />
+                <Label Content="Status:" Height="28" HorizontalAlignment="Left" Margin="6,87,0,0" Name="label3" VerticalAlignment="Top" Width="58" />
+                <Label Content="-" Height="28" HorizontalAlignment="Left" Margin="70,35,0,0" Name="Label_WorldSelect_WorldID" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" />
+                <Label Content="-" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="70,61,0,0" Name="Label_WorldSelect_WorldName" VerticalAlignment="Top" Width="120" />
+                <Label Content="-" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="70,87,0,0" Name="Label_WorldSelect_WorldStatus" VerticalAlignment="Top" Width="120" />
+                <Button Content="Connect" Height="23" HorizontalAlignment="Left" Margin="6,121,0,0" Name="Button_WorldSelect_ConnectToggle" VerticalAlignment="Top" Width="184" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

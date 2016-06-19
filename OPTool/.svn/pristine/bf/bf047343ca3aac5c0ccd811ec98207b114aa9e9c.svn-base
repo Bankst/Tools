@@ -1,0 +1,12 @@
+Databse in Use;
+
+- World00_Character
+- World00_GameLog
+- Account
+- AccountLog
+- StatisticsData
+
+; For Server 2
+
+- World01_Character
+- World01_GameLog

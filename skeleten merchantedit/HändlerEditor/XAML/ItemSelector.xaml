@@ -1,0 +1,37 @@
+﻿<Window x:Class="HändlerEditor.XAML.ItemSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ItemSelector" Height="390" Width="431" MouseDoubleClick="ItemsMouseDoubleClick"
+        x:Name="SelfWindow" Closing="SelfWindowClosing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0">Search:</Label>
+            <TextBox Grid.Column="1" Name="tb" TextChanged="SearchTextChanged" />
+        </Grid>
+        
+        <DataGrid Name="Items" AutoGenerateColumns="False" Grid.Row="1" IsReadOnly="True" FontFamily="Consolas" AlternationCount="2" AlternatingRowBackground="#FFD4FFBA" HorizontalGridLinesBrush="#FF8D8D8D" VerticalGridLinesBrush="#FF8D8D8D" RowBackground="#FFFFF1C1" MouseDoubleClick="ItemsMouseDoubleClick"
+                    ItemsSource="{Binding ElementName=SelfWindow, Path=SearchResult}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" />
+                <DataGridTemplateColumn Header="Icon">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Icon}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="InxName" Binding="{Binding InxName}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

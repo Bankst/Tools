@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSBot", "OSBot\OSBot.csproj", "{D8BB2C01-786A-4780-A3D7-1C39B2775891}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E598DC2-1B1B-497D-BC2A-2A0C5EF4EF44}"
+	ProjectSection(SolutionItems) = preProject
+		Stuff.txt = Stuff.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8BB2C01-786A-4780-A3D7-1C39B2775891}.Debug|x86.ActiveCfg = Debug|x86
+		{D8BB2C01-786A-4780-A3D7-1C39B2775891}.Debug|x86.Build.0 = Debug|x86
+		{D8BB2C01-786A-4780-A3D7-1C39B2775891}.Release|x86.ActiveCfg = Release|x86
+		{D8BB2C01-786A-4780-A3D7-1C39B2775891}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

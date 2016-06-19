@@ -1,0 +1,8 @@
+Notes:
+- ShineTable: _eof and _srFile.EndOfStream  ??
+- Why not inherit ShineTable from DataTable? Also, partial, making things ugly?
+- There's a better release for SHNFile in Fiesta Editor, try to use that one?
+- Make StaticValues const strings, not readonly-static.
+- For easier settings, you can create a settings class, make them public properties and serialize the object (does thesame as current code)
+
+Great job btw, you gave me some ideas.

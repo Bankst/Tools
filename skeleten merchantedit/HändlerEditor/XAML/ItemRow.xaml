@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="HändlerEditor.XAML.ItemRow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xaml="clr-namespace:HändlerEditor.XAML"
+             mc:Ignorable="d" Width="216" Height="36">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>    
+        
+        <xaml:ItemControl x:Name="item0" Grid.Column="0" />
+        <xaml:ItemControl x:Name="item1" Grid.Column="1" />
+        <xaml:ItemControl x:Name="item2" Grid.Column="2" />
+        <xaml:ItemControl x:Name="item3" Grid.Column="3" />
+        <xaml:ItemControl x:Name="item4" Grid.Column="4" />
+        <xaml:ItemControl x:Name="item5" Grid.Column="5" />
+        
+    </Grid>
+</UserControl>

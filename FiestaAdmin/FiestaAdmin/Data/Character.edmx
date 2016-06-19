@@ -1,0 +1,1423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CharacterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CharacterModelStoreContainer">
+          <EntitySet Name="tCharacter" EntityType="CharacterModel.Store.tCharacter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tCharacterChargedBuffer" EntityType="CharacterModel.Store.tCharacterChargedBuffer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tCharacterOptions" EntityType="CharacterModel.Store.tCharacterOptions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tCharacterShape" EntityType="CharacterModel.Store.tCharacterShape" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tCharacterState" EntityType="CharacterModel.Store.tCharacterState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tCharacterTitle" EntityType="CharacterModel.Store.tCharacterTitle" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tFriend" EntityType="CharacterModel.Store.tFriend" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tGuild" EntityType="CharacterModel.Store.tGuild" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tGuildMember" EntityType="CharacterModel.Store.tGuildMember" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tGuildTournament" EntityType="CharacterModel.Store.tGuildTournament" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tItem" EntityType="CharacterModel.Store.tItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tItemMobList" EntityType="CharacterModel.Store.tItemMobList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tItemOptions" EntityType="CharacterModel.Store.tItemOptions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tItemTitle" EntityType="CharacterModel.Store.tItemTitle" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tKingdomQuest" EntityType="CharacterModel.Store.tKingdomQuest" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tMarriage" EntityType="CharacterModel.Store.tMarriage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tMasterPupils" EntityType="CharacterModel.Store.tMasterPupils" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tMiniHouse" EntityType="CharacterModel.Store.tMiniHouse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tParty" EntityType="CharacterModel.Store.tParty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tPartyMember" EntityType="CharacterModel.Store.tPartyMember" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tPet" EntityType="CharacterModel.Store.tPet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tPetSkill" EntityType="CharacterModel.Store.tPetSkill" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tPrison" EntityType="CharacterModel.Store.tPrison" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tQuest" EntityType="CharacterModel.Store.tQuest" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tSkill" EntityType="CharacterModel.Store.tSkill" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tUserMoney" EntityType="CharacterModel.Store.tUserMoney" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__tItemMobL__nItem__2DD1C37F" Association="CharacterModel.Store.FK__tItemMobL__nItem__2DD1C37F">
+            <End Role="tItem" EntitySet="tItem" />
+            <End Role="tItemMobList" EntitySet="tItemMobList" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tItemOpti__nItem__2EC5E7B8" Association="CharacterModel.Store.FK__tItemOpti__nItem__2EC5E7B8">
+            <End Role="tItem" EntitySet="tItem" />
+            <End Role="tItemOptions" EntitySet="tItemOptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tItemTitl__nItem__35A8BAC8" Association="CharacterModel.Store.FK__tItemTitl__nItem__35A8BAC8">
+            <End Role="tItem" EntitySet="tItem" />
+            <End Role="tItemTitle" EntitySet="tItemTitle" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPartyMem__nPart__2D7CBDC4" Association="CharacterModel.Store.FK__tPartyMem__nPart__2D7CBDC4">
+            <End Role="tParty" EntitySet="tParty" />
+            <End Role="tPartyMember" EntitySet="tPartyMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPetSkill__nPetK__0EF836A4" Association="CharacterModel.Store.FK__tPetSkill__nPetK__0EF836A4">
+            <End Role="tPet" EntitySet="tPet" />
+            <End Role="tPetSkill" EntitySet="tPetSkill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tCharacterChargedBuffer_tCharacter" Association="CharacterModel.Store.FK_tCharacterChargedBuffer_tCharacter">
+            <End Role="tCharacter" EntitySet="tCharacter" />
+            <End Role="tCharacterChargedBuffer" EntitySet="tCharacterChargedBuffer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tCharacterTitle_tCharacter" Association="CharacterModel.Store.FK_tCharacterTitle_tCharacter">
+            <End Role="tCharacter" EntitySet="tCharacter" />
+            <End Role="tCharacterTitle" EntitySet="tCharacterTitle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGuildMember_tGuild" Association="CharacterModel.Store.FK_tGuildMember_tGuild">
+            <End Role="tGuild" EntitySet="tGuild" />
+            <End Role="tGuildMember" EntitySet="tGuildMember" />
+          </AssociationSet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'World00_Character.dbo.tAllCharacter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tCharacter">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sID" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="nUserNo" Type="int" Nullable="false" />
+          <Property Name="nAdminLevel" Type="tinyint" Nullable="false" />
+          <Property Name="nPS" Type="int" Nullable="false" />
+          <Property Name="nGS" Type="int" Nullable="false" />
+          <Property Name="dCreateDate" Type="datetime" Nullable="false" />
+          <Property Name="bDeleted" Type="tinyint" Nullable="false" />
+          <Property Name="nLoginZoneX" Type="int" Nullable="false" />
+          <Property Name="nLoginZoneY" Type="int" Nullable="false" />
+          <Property Name="nLoginZoneD" Type="tinyint" Nullable="false" />
+          <Property Name="nPKYellowTime" Type="tinyint" Nullable="false" />
+          <Property Name="dDeletedDate" Type="datetime" Nullable="false" />
+          <Property Name="nAP" Type="smallint" Nullable="false" />
+          <Property Name="sLoginZone" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="nPKCount" Type="int" Nullable="false" />
+          <Property Name="nLevel" Type="smallint" Nullable="false" />
+          <Property Name="nExp" Type="bigint" Nullable="false" />
+          <Property Name="nSlotNo" Type="tinyint" Nullable="false" />
+          <Property Name="nHP" Type="smallint" Nullable="false" />
+          <Property Name="nSP" Type="smallint" Nullable="false" />
+          <Property Name="nHPS" Type="smallint" Nullable="false" />
+          <Property Name="nSPS" Type="smallint" Nullable="false" />
+          <Property Name="dLastLoginDate" Type="datetime" Nullable="false" />
+          <Property Name="nLoginCount" Type="int" Nullable="false" />
+          <Property Name="nCreateWorld" Type="tinyint" Nullable="false" />
+          <Property Name="nFame" Type="int" Nullable="false" />
+          <Property Name="nPrisonMin" Type="smallint" Nullable="false" />
+          <Property Name="nPlayMin" Type="int" Nullable="false" />
+          <Property Name="nFlags" Type="int" Nullable="false" />
+          <Property Name="nMoney" Type="bigint" Nullable="false" />
+          <Property Name="nStrength" Type="tinyint" Nullable="false" />
+          <Property Name="nConstitute" Type="tinyint" Nullable="false" />
+          <Property Name="nDexterity" Type="tinyint" Nullable="false" />
+          <Property Name="nIntelligence" Type="tinyint" Nullable="false" />
+          <Property Name="nMentalPower" Type="tinyint" Nullable="false" />
+          <Property Name="nRedistributePoint" Type="tinyint" Nullable="false" />
+          <Property Name="nKQHandle" Type="int" Nullable="false" />
+          <Property Name="sKQMap" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="nKQX" Type="int" Nullable="false" />
+          <Property Name="nKQY" Type="int" Nullable="false" />
+          <Property Name="nKQD" Type="tinyint" Nullable="false" />
+          <Property Name="dKQDate" Type="datetime" Nullable="false" />
+          <Property Name="RNCS" Type="int" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="PlayTime" Type="bigint" />
+          <Property Name="PDTIME" Type="datetime" />
+          <Property Name="XDTIME" Type="datetime" />
+          <Property Name="ZSCS" Type="int" />
+          <Property Name="ZSTime" Type="datetime" />
+          <Property Name="GDDS" Type="int" />
+          <Property Name="ZSPOINT" Type="int" />
+        </EntityType>
+        <EntityType Name="tCharacterChargedBuffer">
+          <Key>
+            <PropertyRef Name="nNo" />
+          </Key>
+          <Property Name="nNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nKey" Type="int" Nullable="false" />
+          <Property Name="nID" Type="smallint" Nullable="false" />
+          <Property Name="dUseDate" Type="datetime" Nullable="false" />
+          <Property Name="dEndDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tCharacterOptions">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="sShortCutData" Type="varbinary" MaxLength="1024" />
+          <Property Name="sShortCutSize" Type="varbinary" MaxLength="24" />
+          <Property Name="sVideo" Type="varbinary" MaxLength="60" />
+          <Property Name="sSound" Type="varbinary" MaxLength="1" />
+          <Property Name="sGame" Type="varbinary" MaxLength="64" />
+          <Property Name="sWindowsPos" Type="varbinary" MaxLength="392" />
+          <Property Name="sKeyMapping" Type="varbinary" MaxLength="308" />
+        </EntityType>
+        <EntityType Name="tCharacterShape">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nClass" Type="tinyint" Nullable="false" />
+          <Property Name="nRace" Type="tinyint" Nullable="false" />
+          <Property Name="nGender" Type="tinyint" Nullable="false" />
+          <Property Name="nHairType" Type="tinyint" Nullable="false" />
+          <Property Name="nHairColor" Type="tinyint" Nullable="false" />
+          <Property Name="nFaceShape" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tCharacterState">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nStateNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nStateNo" Type="smallint" Nullable="false" />
+          <Property Name="nStateLevel" Type="smallint" Nullable="false" />
+          <Property Name="nStateTime" Type="int" Nullable="false" />
+          <Property Name="nStateCount" Type="smallint" Nullable="false" />
+          <Property Name="nStatePowerDemage" Type="tinyint" Nullable="false" />
+          <Property Name="nStatePowerSP" Type="tinyint" Nullable="false" />
+          <Property Name="nStatePowerKeepTime" Type="tinyint" Nullable="false" />
+          <Property Name="nStatePowerCoolTime" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tCharacterTitle">
+          <Key>
+            <PropertyRef Name="nNo" />
+          </Key>
+          <Property Name="nNo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="dDate" Type="datetime" Nullable="false" />
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nType" Type="tinyint" Nullable="false" />
+          <Property Name="nElementNo" Type="tinyint" Nullable="false" />
+          <Property Name="nElementValue" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tFriend">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nFriendCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nFriendCharNo" Type="int" Nullable="false" />
+          <Property Name="nFlags" Type="tinyint" Nullable="false" />
+          <Property Name="dDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tGuild">
+          <Key>
+            <PropertyRef Name="nNo" />
+          </Key>
+          <Property Name="nNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sName" Type="nvarchar" Nullable="false" MaxLength="18" />
+          <Property Name="sPassword" Type="nvarchar" Nullable="false" MaxLength="9" />
+          <Property Name="nMaxMembers" Type="smallint" Nullable="false" />
+          <Property Name="nMoney" Type="bigint" Nullable="false" />
+          <Property Name="nType" Type="tinyint" Nullable="false" />
+          <Property Name="nGrade" Type="tinyint" Nullable="false" />
+          <Property Name="nFame" Type="int" Nullable="false" />
+          <Property Name="nStoneLevel" Type="smallint" Nullable="false" />
+          <Property Name="nExp" Type="bigint" Nullable="false" />
+          <Property Name="dCreateDate" Type="datetime" Nullable="false" />
+          <Property Name="dWarRequestDate" Type="datetime" Nullable="false" />
+          <Property Name="dWarStartDate" Type="datetime" Nullable="false" />
+          <Property Name="dWarEndDate" Type="datetime" Nullable="false" />
+          <Property Name="nWarEnemy" Type="int" Nullable="false" />
+          <Property Name="nWarWinCount" Type="int" Nullable="false" />
+          <Property Name="nWarLoseCount" Type="int" Nullable="false" />
+          <Property Name="nWarDrawCount" Type="int" Nullable="false" />
+          <Property Name="nDismissStatus" Type="tinyint" Nullable="false" />
+          <Property Name="dDismissDate" Type="datetime" Nullable="false" />
+          <Property Name="sIntro" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="dNotifyDate" Type="datetime" Nullable="false" />
+          <Property Name="sNotifyCharID" Type="nvarchar" Nullable="false" MaxLength="17" />
+          <Property Name="sNotify" Type="nvarchar" Nullable="false" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="tGuildMember">
+          <Key>
+            <PropertyRef Name="nNo" />
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nNo" Type="int" Nullable="false" />
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="dJoinDate" Type="datetime" Nullable="false" />
+          <Property Name="nGrade" Type="tinyint" Nullable="false" />
+          <Property Name="nFlags" Type="int" Nullable="false" />
+          <Property Name="nExpRatio" Type="smallint" Nullable="false" />
+          <Property Name="sIntro" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="tGuildTournament">
+          <Key>
+            <PropertyRef Name="nGTNo" />
+            <PropertyRef Name="nType" />
+          </Key>
+          <Property Name="nGTNo" Type="int" Nullable="false" />
+          <Property Name="nType" Type="smallint" Nullable="false" />
+          <Property Name="nData" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tItem">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+          </Key>
+          <Property Name="nItemKey" Type="bigint" Nullable="false" />
+          <Property Name="nStorageType" Type="tinyint" Nullable="false" />
+          <Property Name="nOwner" Type="bigint" Nullable="false" />
+          <Property Name="nStorage" Type="smallint" Nullable="false" />
+          <Property Name="nItemID" Type="int" Nullable="false" />
+          <Property Name="nFlags" Type="int" Nullable="false" />
+          <Property Name="dDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tItemMobList">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+            <PropertyRef Name="nMobID" />
+          </Key>
+          <Property Name="nItemKey" Type="bigint" Nullable="false" />
+          <Property Name="nMobID" Type="smallint" Nullable="false" />
+          <Property Name="nGrade" Type="tinyint" Nullable="false" />
+          <Property Name="nKillCount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tItemOptions">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+            <PropertyRef Name="nOptionType" />
+          </Key>
+          <Property Name="nItemKey" Type="bigint" Nullable="false" />
+          <Property Name="nOptionType" Type="smallint" Nullable="false" />
+          <Property Name="nOptionData" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tItemTitle">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+          </Key>
+          <Property Name="nItemKey" Type="bigint" Nullable="false" />
+          <Property Name="nTitleType" Type="smallint" Nullable="false" />
+          <Property Name="sTitle" Type="nvarchar" Nullable="false" MaxLength="24" />
+          <Property Name="nTitleCharNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tKingdomQuest">
+          <Key>
+            <PropertyRef Name="nQuestNo" />
+          </Key>
+          <Property Name="nQuestNo" Type="smallint" Nullable="false" />
+          <Property Name="sData" Type="varchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="tMarriage">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nPartnerCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nPartnerCharNo" Type="int" Nullable="false" />
+          <Property Name="nStatus" Type="tinyint" Nullable="false" />
+          <Property Name="nSubStatus" Type="tinyint" Nullable="false" />
+          <Property Name="dWhen" Type="datetime" Nullable="false" />
+          <Property Name="dSubWhen" Type="datetime" Nullable="false" />
+          <Property Name="nMarriageCount" Type="tinyint" Nullable="false" />
+          <Property Name="nDivorceCancel" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tMasterPupils">
+          <Key>
+            <PropertyRef Name="nPupils" />
+            <PropertyRef Name="nMaster" />
+          </Key>
+          <Property Name="nPupils" Type="int" Nullable="false" />
+          <Property Name="nMaster" Type="int" Nullable="false" />
+          <Property Name="nFlags" Type="int" Nullable="false" />
+          <Property Name="dRegDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tMiniHouse">
+          <Key>
+            <PropertyRef Name="nListNo" />
+          </Key>
+          <Property Name="nListNo" Type="int" Nullable="false" />
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="sData" Type="varchar" Nullable="false" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="tParty">
+          <Key>
+            <PropertyRef Name="nPartyNo" />
+          </Key>
+          <Property Name="nFlags" Type="int" Nullable="false" />
+          <Property Name="nMasterCharNo" Type="int" Nullable="false" />
+          <Property Name="nPartyNo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tPartyMember">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nPartyNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nFlag" Type="tinyint" Nullable="false" />
+          <Property Name="nPartyNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tPet">
+          <Key>
+            <PropertyRef Name="nPetKey" />
+          </Key>
+          <Property Name="nStorage" Type="smallint" Nullable="false" />
+          <Property Name="nPetNumber" Type="tinyint" Nullable="false" />
+          <Property Name="nOwner" Type="bigint" Nullable="false" />
+          <Property Name="nPetKey" Type="bigint" Nullable="false" />
+          <Property Name="nPetID" Type="int" Nullable="false" />
+          <Property Name="sInfo" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="nFlags" Type="int" Nullable="false" />
+          <Property Name="nAssignName" Type="nvarchar" Nullable="false" MaxLength="24" />
+          <Property Name="nLevel" Type="smallint" Nullable="false" />
+          <Property Name="nExp" Type="bigint" Nullable="false" />
+          <Property Name="nSatiety" Type="tinyint" Nullable="false" />
+          <Property Name="nSpeed" Type="tinyint" Nullable="false" />
+          <Property Name="nAbilityType" Type="tinyint" Nullable="false" />
+          <Property Name="nAbilityValue" Type="tinyint" Nullable="false" />
+          <Property Name="nSkinColor" Type="tinyint" Nullable="false" />
+          <Property Name="dDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tPetSkill">
+          <Key>
+            <PropertyRef Name="nSkillNo" />
+            <PropertyRef Name="nPetKey" />
+          </Key>
+          <Property Name="nSkillLevel" Type="tinyint" Nullable="false" />
+          <Property Name="nSkillNo" Type="int" Nullable="false" />
+          <Property Name="nSkillExp" Type="int" Nullable="false" />
+          <Property Name="nPetKey" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tPrison">
+          <Key>
+            <PropertyRef Name="nPrisonNum" />
+          </Key>
+          <Property Name="nPrisonNum" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nCharID" Type="int" Nullable="false" />
+          <Property Name="dPrisonDate" Type="datetime" Nullable="false" />
+          <Property Name="nMinute" Type="smallint" Nullable="false" />
+          <Property Name="sReason" Type="nvarchar" MaxLength="16" />
+          <Property Name="nRegNumber" Type="bigint" />
+          <Property Name="sGmID" Type="nvarchar" MaxLength="16" />
+          <Property Name="sRemark" Type="nvarchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="tQuest">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nQuestNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nQuestNo" Type="int" Nullable="false" />
+          <Property Name="nStatus" Type="tinyint" Nullable="false" />
+          <Property Name="sData" Type="varbinary" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tSkill">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nSkillNo" />
+          </Key>
+          <Property Name="nCharNo" Type="int" Nullable="false" />
+          <Property Name="nSkillNo" Type="smallint" Nullable="false" />
+          <Property Name="nSkillLevel" Type="tinyint" Nullable="false" />
+          <Property Name="nSkillExp" Type="int" Nullable="false" />
+          <Property Name="nSkillWriteTime" Type="bigint" Nullable="false" />
+          <Property Name="nSkillCoolTime" Type="int" Nullable="false" />
+          <Property Name="nSkillPowerDemage" Type="tinyint" Nullable="false" />
+          <Property Name="nSkillPowerSP" Type="tinyint" Nullable="false" />
+          <Property Name="nSkillPowerKeepTime" Type="tinyint" Nullable="false" />
+          <Property Name="nSkillPowerCoolTime" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tUserMoney">
+          <Key>
+            <PropertyRef Name="nUserNo" />
+          </Key>
+          <Property Name="nUserNo" Type="int" Nullable="false" />
+          <Property Name="nUserMoney" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__tItemMobL__nItem__2DD1C37F">
+          <End Role="tItem" Type="CharacterModel.Store.tItem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tItemMobList" Type="CharacterModel.Store.tItemMobList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tItem">
+              <PropertyRef Name="nItemKey" />
+            </Principal>
+            <Dependent Role="tItemMobList">
+              <PropertyRef Name="nItemKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tItemOpti__nItem__2EC5E7B8">
+          <End Role="tItem" Type="CharacterModel.Store.tItem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tItemOptions" Type="CharacterModel.Store.tItemOptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tItem">
+              <PropertyRef Name="nItemKey" />
+            </Principal>
+            <Dependent Role="tItemOptions">
+              <PropertyRef Name="nItemKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tItemTitl__nItem__35A8BAC8">
+          <End Role="tItem" Type="CharacterModel.Store.tItem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tItemTitle" Type="CharacterModel.Store.tItemTitle" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tItem">
+              <PropertyRef Name="nItemKey" />
+            </Principal>
+            <Dependent Role="tItemTitle">
+              <PropertyRef Name="nItemKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPartyMem__nPart__2D7CBDC4">
+          <End Role="tParty" Type="CharacterModel.Store.tParty" Multiplicity="1" />
+          <End Role="tPartyMember" Type="CharacterModel.Store.tPartyMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tParty">
+              <PropertyRef Name="nPartyNo" />
+            </Principal>
+            <Dependent Role="tPartyMember">
+              <PropertyRef Name="nPartyNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPetSkill__nPetK__0EF836A4">
+          <End Role="tPet" Type="CharacterModel.Store.tPet" Multiplicity="1" />
+          <End Role="tPetSkill" Type="CharacterModel.Store.tPetSkill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPet">
+              <PropertyRef Name="nPetKey" />
+            </Principal>
+            <Dependent Role="tPetSkill">
+              <PropertyRef Name="nPetKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tCharacterChargedBuffer_tCharacter">
+          <End Role="tCharacter" Type="CharacterModel.Store.tCharacter" Multiplicity="1" />
+          <End Role="tCharacterChargedBuffer" Type="CharacterModel.Store.tCharacterChargedBuffer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tCharacter">
+              <PropertyRef Name="nCharNo" />
+            </Principal>
+            <Dependent Role="tCharacterChargedBuffer">
+              <PropertyRef Name="nCharNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tCharacterTitle_tCharacter">
+          <End Role="tCharacter" Type="CharacterModel.Store.tCharacter" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tCharacterTitle" Type="CharacterModel.Store.tCharacterTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tCharacter">
+              <PropertyRef Name="nCharNo" />
+            </Principal>
+            <Dependent Role="tCharacterTitle">
+              <PropertyRef Name="nCharNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGuildMember_tGuild">
+          <End Role="tGuild" Type="CharacterModel.Store.tGuild" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tGuildMember" Type="CharacterModel.Store.tGuildMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGuild">
+              <PropertyRef Name="nNo" />
+            </Principal>
+            <Dependent Role="tGuildMember">
+              <PropertyRef Name="nNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CharacterModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CharacterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tCharacters" EntityType="CharacterModel.tCharacter" />
+          <EntitySet Name="tCharacterChargedBuffers" EntityType="CharacterModel.tCharacterChargedBuffer" />
+          <EntitySet Name="tCharacterOptions" EntityType="CharacterModel.tCharacterOption" />
+          <EntitySet Name="tCharacterShapes" EntityType="CharacterModel.tCharacterShape" />
+          <EntitySet Name="tCharacterStates" EntityType="CharacterModel.tCharacterState" />
+          <EntitySet Name="tCharacterTitles" EntityType="CharacterModel.tCharacterTitle" />
+          <EntitySet Name="tFriends" EntityType="CharacterModel.tFriend" />
+          <EntitySet Name="tGuilds" EntityType="CharacterModel.tGuild" />
+          <EntitySet Name="tGuildMembers" EntityType="CharacterModel.tGuildMember" />
+          <EntitySet Name="tGuildTournaments" EntityType="CharacterModel.tGuildTournament" />
+          <EntitySet Name="tItems" EntityType="CharacterModel.tItem" />
+          <EntitySet Name="tItemMobLists" EntityType="CharacterModel.tItemMobList" />
+          <EntitySet Name="tItemOptions" EntityType="CharacterModel.tItemOption" />
+          <EntitySet Name="tItemTitles" EntityType="CharacterModel.tItemTitle" />
+          <EntitySet Name="tKingdomQuests" EntityType="CharacterModel.tKingdomQuest" />
+          <EntitySet Name="tMarriages" EntityType="CharacterModel.tMarriage" />
+          <EntitySet Name="tMasterPupils" EntityType="CharacterModel.tMasterPupil" />
+          <EntitySet Name="tMiniHouses" EntityType="CharacterModel.tMiniHouse" />
+          <EntitySet Name="tParties" EntityType="CharacterModel.tParty" />
+          <EntitySet Name="tPartyMembers" EntityType="CharacterModel.tPartyMember" />
+          <EntitySet Name="tPets" EntityType="CharacterModel.tPet" />
+          <EntitySet Name="tPetSkills" EntityType="CharacterModel.tPetSkill" />
+          <EntitySet Name="tPrisons" EntityType="CharacterModel.tPrison" />
+          <EntitySet Name="tQuests" EntityType="CharacterModel.tQuest" />
+          <EntitySet Name="tSkills" EntityType="CharacterModel.tSkill" />
+          <EntitySet Name="tUserMoneys" EntityType="CharacterModel.tUserMoney" />
+          <AssociationSet Name="FK_tCharacterChargedBuffer_tCharacter" Association="CharacterModel.FK_tCharacterChargedBuffer_tCharacter">
+            <End Role="tCharacter" EntitySet="tCharacters" />
+            <End Role="tCharacterChargedBuffer" EntitySet="tCharacterChargedBuffers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tCharacterTitle_tCharacter" Association="CharacterModel.FK_tCharacterTitle_tCharacter">
+            <End Role="tCharacter" EntitySet="tCharacters" />
+            <End Role="tCharacterTitle" EntitySet="tCharacterTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGuildMember_tGuild" Association="CharacterModel.FK_tGuildMember_tGuild">
+            <End Role="tGuild" EntitySet="tGuilds" />
+            <End Role="tGuildMember" EntitySet="tGuildMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tItemMobL__nItem__2DD1C37F" Association="CharacterModel.FK__tItemMobL__nItem__2DD1C37F">
+            <End Role="tItem" EntitySet="tItems" />
+            <End Role="tItemMobList" EntitySet="tItemMobLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tItemOpti__nItem__2EC5E7B8" Association="CharacterModel.FK__tItemOpti__nItem__2EC5E7B8">
+            <End Role="tItem" EntitySet="tItems" />
+            <End Role="tItemOptions" EntitySet="tItemOptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tItemTitl__nItem__35A8BAC8" Association="CharacterModel.FK__tItemTitl__nItem__35A8BAC8">
+            <End Role="tItem" EntitySet="tItems" />
+            <End Role="tItemTitle" EntitySet="tItemTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPartyMem__nPart__2D7CBDC4" Association="CharacterModel.FK__tPartyMem__nPart__2D7CBDC4">
+            <End Role="tParty" EntitySet="tParties" />
+            <End Role="tPartyMember" EntitySet="tPartyMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tPetSkill__nPetK__0EF836A4" Association="CharacterModel.FK__tPetSkill__nPetK__0EF836A4">
+            <End Role="tPet" EntitySet="tPets" />
+            <End Role="tPetSkill" EntitySet="tPetSkills" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tCharacter">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sID" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="nUserNo" Type="Int32" Nullable="false" />
+          <Property Name="nAdminLevel" Type="Byte" Nullable="false" />
+          <Property Name="nPS" Type="Int32" Nullable="false" />
+          <Property Name="nGS" Type="Int32" Nullable="false" />
+          <Property Name="dCreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="bDeleted" Type="Byte" Nullable="false" />
+          <Property Name="nLoginZoneX" Type="Int32" Nullable="false" />
+          <Property Name="nLoginZoneY" Type="Int32" Nullable="false" />
+          <Property Name="nLoginZoneD" Type="Byte" Nullable="false" />
+          <Property Name="nPKYellowTime" Type="Byte" Nullable="false" />
+          <Property Name="dDeletedDate" Type="DateTime" Nullable="false" />
+          <Property Name="nAP" Type="Int16" Nullable="false" />
+          <Property Name="sLoginZone" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="nPKCount" Type="Int32" Nullable="false" />
+          <Property Name="nLevel" Type="Int16" Nullable="false" />
+          <Property Name="nExp" Type="Int64" Nullable="false" />
+          <Property Name="nSlotNo" Type="Byte" Nullable="false" />
+          <Property Name="nHP" Type="Int16" Nullable="false" />
+          <Property Name="nSP" Type="Int16" Nullable="false" />
+          <Property Name="nHPS" Type="Int16" Nullable="false" />
+          <Property Name="nSPS" Type="Int16" Nullable="false" />
+          <Property Name="dLastLoginDate" Type="DateTime" Nullable="false" />
+          <Property Name="nLoginCount" Type="Int32" Nullable="false" />
+          <Property Name="nCreateWorld" Type="Byte" Nullable="false" />
+          <Property Name="nFame" Type="Int32" Nullable="false" />
+          <Property Name="nPrisonMin" Type="Int16" Nullable="false" />
+          <Property Name="nPlayMin" Type="Int32" Nullable="false" />
+          <Property Name="nFlags" Type="Int32" Nullable="false" />
+          <Property Name="nMoney" Type="Int64" Nullable="false" />
+          <Property Name="nStrength" Type="Byte" Nullable="false" />
+          <Property Name="nConstitute" Type="Byte" Nullable="false" />
+          <Property Name="nDexterity" Type="Byte" Nullable="false" />
+          <Property Name="nIntelligence" Type="Byte" Nullable="false" />
+          <Property Name="nMentalPower" Type="Byte" Nullable="false" />
+          <Property Name="nRedistributePoint" Type="Byte" Nullable="false" />
+          <Property Name="nKQHandle" Type="Int32" Nullable="false" />
+          <Property Name="sKQMap" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="nKQX" Type="Int32" Nullable="false" />
+          <Property Name="nKQY" Type="Int32" Nullable="false" />
+          <Property Name="nKQD" Type="Byte" Nullable="false" />
+          <Property Name="dKQDate" Type="DateTime" Nullable="false" />
+          <Property Name="RNCS" Type="Int32" />
+          <Property Name="StartTime" Type="DateTime" />
+          <Property Name="PlayTime" Type="Int64" />
+          <Property Name="PDTIME" Type="DateTime" />
+          <Property Name="XDTIME" Type="DateTime" />
+          <Property Name="ZSCS" Type="Int32" />
+          <Property Name="ZSTime" Type="DateTime" />
+          <Property Name="GDDS" Type="Int32" />
+          <Property Name="ZSPOINT" Type="Int32" />
+          <NavigationProperty Name="tCharacterChargedBuffers" Relationship="CharacterModel.FK_tCharacterChargedBuffer_tCharacter" FromRole="tCharacter" ToRole="tCharacterChargedBuffer" />
+          <NavigationProperty Name="tCharacterTitles" Relationship="CharacterModel.FK_tCharacterTitle_tCharacter" FromRole="tCharacter" ToRole="tCharacterTitle" />
+        </EntityType>
+        <EntityType Name="tCharacterChargedBuffer">
+          <Key>
+            <PropertyRef Name="nNo" />
+          </Key>
+          <Property Name="nNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nKey" Type="Int32" Nullable="false" />
+          <Property Name="nID" Type="Int16" Nullable="false" />
+          <Property Name="dUseDate" Type="DateTime" Nullable="false" />
+          <Property Name="dEndDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tCharacter" Relationship="CharacterModel.FK_tCharacterChargedBuffer_tCharacter" FromRole="tCharacterChargedBuffer" ToRole="tCharacter" />
+        </EntityType>
+        <EntityType Name="tCharacterOption">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="sShortCutData" Type="Binary" MaxLength="1024" FixedLength="false" />
+          <Property Name="sShortCutSize" Type="Binary" MaxLength="24" FixedLength="false" />
+          <Property Name="sVideo" Type="Binary" MaxLength="60" FixedLength="false" />
+          <Property Name="sSound" Type="Binary" MaxLength="1" FixedLength="false" />
+          <Property Name="sGame" Type="Binary" MaxLength="64" FixedLength="false" />
+          <Property Name="sWindowsPos" Type="Binary" MaxLength="392" FixedLength="false" />
+          <Property Name="sKeyMapping" Type="Binary" MaxLength="308" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tCharacterShape">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nClass" Type="Byte" Nullable="false" />
+          <Property Name="nRace" Type="Byte" Nullable="false" />
+          <Property Name="nGender" Type="Byte" Nullable="false" />
+          <Property Name="nHairType" Type="Byte" Nullable="false" />
+          <Property Name="nHairColor" Type="Byte" Nullable="false" />
+          <Property Name="nFaceShape" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tCharacterState">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nStateNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nStateNo" Type="Int16" Nullable="false" />
+          <Property Name="nStateLevel" Type="Int16" Nullable="false" />
+          <Property Name="nStateTime" Type="Int32" Nullable="false" />
+          <Property Name="nStateCount" Type="Int16" Nullable="false" />
+          <Property Name="nStatePowerDemage" Type="Byte" Nullable="false" />
+          <Property Name="nStatePowerSP" Type="Byte" Nullable="false" />
+          <Property Name="nStatePowerKeepTime" Type="Byte" Nullable="false" />
+          <Property Name="nStatePowerCoolTime" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tCharacterTitle">
+          <Key>
+            <PropertyRef Name="nNo" />
+          </Key>
+          <Property Name="nNo" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dDate" Type="DateTime" Nullable="false" />
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nType" Type="Byte" Nullable="false" />
+          <Property Name="nElementNo" Type="Byte" Nullable="false" />
+          <Property Name="nElementValue" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="tCharacter" Relationship="CharacterModel.FK_tCharacterTitle_tCharacter" FromRole="tCharacterTitle" ToRole="tCharacter" />
+        </EntityType>
+        <EntityType Name="tFriend">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nFriendCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nFriendCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nFlags" Type="Byte" Nullable="false" />
+          <Property Name="dDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tGuild">
+          <Key>
+            <PropertyRef Name="nNo" />
+          </Key>
+          <Property Name="nNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sName" Type="String" Nullable="false" MaxLength="18" Unicode="true" FixedLength="false" />
+          <Property Name="sPassword" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+          <Property Name="nMaxMembers" Type="Int16" Nullable="false" />
+          <Property Name="nMoney" Type="Int64" Nullable="false" />
+          <Property Name="nType" Type="Byte" Nullable="false" />
+          <Property Name="nGrade" Type="Byte" Nullable="false" />
+          <Property Name="nFame" Type="Int32" Nullable="false" />
+          <Property Name="nStoneLevel" Type="Int16" Nullable="false" />
+          <Property Name="nExp" Type="Int64" Nullable="false" />
+          <Property Name="dCreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="dWarRequestDate" Type="DateTime" Nullable="false" />
+          <Property Name="dWarStartDate" Type="DateTime" Nullable="false" />
+          <Property Name="dWarEndDate" Type="DateTime" Nullable="false" />
+          <Property Name="nWarEnemy" Type="Int32" Nullable="false" />
+          <Property Name="nWarWinCount" Type="Int32" Nullable="false" />
+          <Property Name="nWarLoseCount" Type="Int32" Nullable="false" />
+          <Property Name="nWarDrawCount" Type="Int32" Nullable="false" />
+          <Property Name="nDismissStatus" Type="Byte" Nullable="false" />
+          <Property Name="dDismissDate" Type="DateTime" Nullable="false" />
+          <Property Name="sIntro" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="dNotifyDate" Type="DateTime" Nullable="false" />
+          <Property Name="sNotifyCharID" Type="String" Nullable="false" MaxLength="17" Unicode="true" FixedLength="false" />
+          <Property Name="sNotify" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tGuildMembers" Relationship="CharacterModel.FK_tGuildMember_tGuild" FromRole="tGuild" ToRole="tGuildMember" />
+        </EntityType>
+        <EntityType Name="tGuildMember">
+          <Key>
+            <PropertyRef Name="nNo" />
+            <PropertyRef Name="nCharNo" />
+          </Key>
+          <Property Name="nNo" Type="Int32" Nullable="false" />
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="dJoinDate" Type="DateTime" Nullable="false" />
+          <Property Name="nGrade" Type="Byte" Nullable="false" />
+          <Property Name="nFlags" Type="Int32" Nullable="false" />
+          <Property Name="nExpRatio" Type="Int16" Nullable="false" />
+          <Property Name="sIntro" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tGuild" Relationship="CharacterModel.FK_tGuildMember_tGuild" FromRole="tGuildMember" ToRole="tGuild" />
+        </EntityType>
+        <EntityType Name="tGuildTournament">
+          <Key>
+            <PropertyRef Name="nGTNo" />
+            <PropertyRef Name="nType" />
+          </Key>
+          <Property Name="nGTNo" Type="Int32" Nullable="false" />
+          <Property Name="nType" Type="Int16" Nullable="false" />
+          <Property Name="nData" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tItem">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+          </Key>
+          <Property Name="nItemKey" Type="Int64" Nullable="false" />
+          <Property Name="nStorageType" Type="Byte" Nullable="false" />
+          <Property Name="nOwner" Type="Int64" Nullable="false" />
+          <Property Name="nStorage" Type="Int16" Nullable="false" />
+          <Property Name="nItemID" Type="Int32" Nullable="false" />
+          <Property Name="nFlags" Type="Int32" Nullable="false" />
+          <Property Name="dDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tItemMobLists" Relationship="CharacterModel.FK__tItemMobL__nItem__2DD1C37F" FromRole="tItem" ToRole="tItemMobList" />
+          <NavigationProperty Name="tItemOptions" Relationship="CharacterModel.FK__tItemOpti__nItem__2EC5E7B8" FromRole="tItem" ToRole="tItemOptions" />
+          <NavigationProperty Name="tItemTitle" Relationship="CharacterModel.FK__tItemTitl__nItem__35A8BAC8" FromRole="tItem" ToRole="tItemTitle" />
+        </EntityType>
+        <EntityType Name="tItemMobList">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+            <PropertyRef Name="nMobID" />
+          </Key>
+          <Property Name="nItemKey" Type="Int64" Nullable="false" />
+          <Property Name="nMobID" Type="Int16" Nullable="false" />
+          <Property Name="nGrade" Type="Byte" Nullable="false" />
+          <Property Name="nKillCount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tItem" Relationship="CharacterModel.FK__tItemMobL__nItem__2DD1C37F" FromRole="tItemMobList" ToRole="tItem" />
+        </EntityType>
+        <EntityType Name="tItemOption">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+            <PropertyRef Name="nOptionType" />
+          </Key>
+          <Property Name="nItemKey" Type="Int64" Nullable="false" />
+          <Property Name="nOptionType" Type="Int16" Nullable="false" />
+          <Property Name="nOptionData" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="tItem" Relationship="CharacterModel.FK__tItemOpti__nItem__2EC5E7B8" FromRole="tItemOptions" ToRole="tItem" />
+        </EntityType>
+        <EntityType Name="tItemTitle">
+          <Key>
+            <PropertyRef Name="nItemKey" />
+          </Key>
+          <Property Name="nItemKey" Type="Int64" Nullable="false" />
+          <Property Name="nTitleType" Type="Int16" Nullable="false" />
+          <Property Name="sTitle" Type="String" Nullable="false" MaxLength="24" Unicode="true" FixedLength="false" />
+          <Property Name="nTitleCharNo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tItem" Relationship="CharacterModel.FK__tItemTitl__nItem__35A8BAC8" FromRole="tItemTitle" ToRole="tItem" />
+        </EntityType>
+        <EntityType Name="tKingdomQuest">
+          <Key>
+            <PropertyRef Name="nQuestNo" />
+          </Key>
+          <Property Name="nQuestNo" Type="Int16" Nullable="false" />
+          <Property Name="sData" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tMarriage">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nPartnerCharNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nPartnerCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nStatus" Type="Byte" Nullable="false" />
+          <Property Name="nSubStatus" Type="Byte" Nullable="false" />
+          <Property Name="dWhen" Type="DateTime" Nullable="false" />
+          <Property Name="dSubWhen" Type="DateTime" Nullable="false" />
+          <Property Name="nMarriageCount" Type="Byte" Nullable="false" />
+          <Property Name="nDivorceCancel" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tMasterPupil">
+          <Key>
+            <PropertyRef Name="nPupils" />
+            <PropertyRef Name="nMaster" />
+          </Key>
+          <Property Name="nPupils" Type="Int32" Nullable="false" />
+          <Property Name="nMaster" Type="Int32" Nullable="false" />
+          <Property Name="nFlags" Type="Int32" Nullable="false" />
+          <Property Name="dRegDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tMiniHouse">
+          <Key>
+            <PropertyRef Name="nListNo" />
+          </Key>
+          <Property Name="nListNo" Type="Int32" Nullable="false" />
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="sData" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tParty">
+          <Key>
+            <PropertyRef Name="nPartyNo" />
+          </Key>
+          <Property Name="nFlags" Type="Int32" Nullable="false" />
+          <Property Name="nMasterCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nPartyNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tPartyMembers" Relationship="CharacterModel.FK__tPartyMem__nPart__2D7CBDC4" FromRole="tParty" ToRole="tPartyMember" />
+        </EntityType>
+        <EntityType Name="tPartyMember">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nPartyNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nFlag" Type="Byte" Nullable="false" />
+          <Property Name="nPartyNo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tParty" Relationship="CharacterModel.FK__tPartyMem__nPart__2D7CBDC4" FromRole="tPartyMember" ToRole="tParty" />
+        </EntityType>
+        <EntityType Name="tPet">
+          <Key>
+            <PropertyRef Name="nPetKey" />
+          </Key>
+          <Property Name="nStorage" Type="Int16" Nullable="false" />
+          <Property Name="nPetNumber" Type="Byte" Nullable="false" />
+          <Property Name="nOwner" Type="Int64" Nullable="false" />
+          <Property Name="nPetKey" Type="Int64" Nullable="false" />
+          <Property Name="nPetID" Type="Int32" Nullable="false" />
+          <Property Name="sInfo" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="nFlags" Type="Int32" Nullable="false" />
+          <Property Name="nAssignName" Type="String" Nullable="false" MaxLength="24" Unicode="true" FixedLength="false" />
+          <Property Name="nLevel" Type="Int16" Nullable="false" />
+          <Property Name="nExp" Type="Int64" Nullable="false" />
+          <Property Name="nSatiety" Type="Byte" Nullable="false" />
+          <Property Name="nSpeed" Type="Byte" Nullable="false" />
+          <Property Name="nAbilityType" Type="Byte" Nullable="false" />
+          <Property Name="nAbilityValue" Type="Byte" Nullable="false" />
+          <Property Name="nSkinColor" Type="Byte" Nullable="false" />
+          <Property Name="dDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tPetSkills" Relationship="CharacterModel.FK__tPetSkill__nPetK__0EF836A4" FromRole="tPet" ToRole="tPetSkill" />
+        </EntityType>
+        <EntityType Name="tPetSkill">
+          <Key>
+            <PropertyRef Name="nSkillNo" />
+            <PropertyRef Name="nPetKey" />
+          </Key>
+          <Property Name="nSkillLevel" Type="Byte" Nullable="false" />
+          <Property Name="nSkillNo" Type="Int32" Nullable="false" />
+          <Property Name="nSkillExp" Type="Int32" Nullable="false" />
+          <Property Name="nPetKey" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="tPet" Relationship="CharacterModel.FK__tPetSkill__nPetK__0EF836A4" FromRole="tPetSkill" ToRole="tPet" />
+        </EntityType>
+        <EntityType Name="tPrison">
+          <Key>
+            <PropertyRef Name="nPrisonNum" />
+          </Key>
+          <Property Name="nPrisonNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nCharID" Type="Int32" Nullable="false" />
+          <Property Name="dPrisonDate" Type="DateTime" Nullable="false" />
+          <Property Name="nMinute" Type="Int16" Nullable="false" />
+          <Property Name="sReason" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="nRegNumber" Type="Int64" />
+          <Property Name="sGmID" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="sRemark" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tQuest">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nQuestNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nQuestNo" Type="Int32" Nullable="false" />
+          <Property Name="nStatus" Type="Byte" Nullable="false" />
+          <Property Name="sData" Type="Binary" Nullable="false" MaxLength="100" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tSkill">
+          <Key>
+            <PropertyRef Name="nCharNo" />
+            <PropertyRef Name="nSkillNo" />
+          </Key>
+          <Property Name="nCharNo" Type="Int32" Nullable="false" />
+          <Property Name="nSkillNo" Type="Int16" Nullable="false" />
+          <Property Name="nSkillLevel" Type="Byte" Nullable="false" />
+          <Property Name="nSkillExp" Type="Int32" Nullable="false" />
+          <Property Name="nSkillWriteTime" Type="Int64" Nullable="false" />
+          <Property Name="nSkillCoolTime" Type="Int32" Nullable="false" />
+          <Property Name="nSkillPowerDemage" Type="Byte" Nullable="false" />
+          <Property Name="nSkillPowerSP" Type="Byte" Nullable="false" />
+          <Property Name="nSkillPowerKeepTime" Type="Byte" Nullable="false" />
+          <Property Name="nSkillPowerCoolTime" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tUserMoney">
+          <Key>
+            <PropertyRef Name="nUserNo" />
+          </Key>
+          <Property Name="nUserNo" Type="Int32" Nullable="false" />
+          <Property Name="nUserMoney" Type="Int64" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tCharacterChargedBuffer_tCharacter">
+          <End Role="tCharacter" Type="CharacterModel.tCharacter" Multiplicity="1" />
+          <End Role="tCharacterChargedBuffer" Type="CharacterModel.tCharacterChargedBuffer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tCharacter">
+              <PropertyRef Name="nCharNo" />
+            </Principal>
+            <Dependent Role="tCharacterChargedBuffer">
+              <PropertyRef Name="nCharNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tCharacterTitle_tCharacter">
+          <End Role="tCharacter" Type="CharacterModel.tCharacter" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tCharacterTitle" Type="CharacterModel.tCharacterTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tCharacter">
+              <PropertyRef Name="nCharNo" />
+            </Principal>
+            <Dependent Role="tCharacterTitle">
+              <PropertyRef Name="nCharNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGuildMember_tGuild">
+          <End Role="tGuild" Type="CharacterModel.tGuild" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tGuildMember" Type="CharacterModel.tGuildMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tGuild">
+              <PropertyRef Name="nNo" />
+            </Principal>
+            <Dependent Role="tGuildMember">
+              <PropertyRef Name="nNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tItemMobL__nItem__2DD1C37F">
+          <End Role="tItem" Type="CharacterModel.tItem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tItemMobList" Type="CharacterModel.tItemMobList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tItem">
+              <PropertyRef Name="nItemKey" />
+            </Principal>
+            <Dependent Role="tItemMobList">
+              <PropertyRef Name="nItemKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tItemOpti__nItem__2EC5E7B8">
+          <End Role="tItem" Type="CharacterModel.tItem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tItemOptions" Type="CharacterModel.tItemOption" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tItem">
+              <PropertyRef Name="nItemKey" />
+            </Principal>
+            <Dependent Role="tItemOptions">
+              <PropertyRef Name="nItemKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tItemTitl__nItem__35A8BAC8">
+          <End Role="tItem" Type="CharacterModel.tItem" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tItemTitle" Type="CharacterModel.tItemTitle" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tItem">
+              <PropertyRef Name="nItemKey" />
+            </Principal>
+            <Dependent Role="tItemTitle">
+              <PropertyRef Name="nItemKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPartyMem__nPart__2D7CBDC4">
+          <End Role="tParty" Type="CharacterModel.tParty" Multiplicity="1" />
+          <End Role="tPartyMember" Type="CharacterModel.tPartyMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tParty">
+              <PropertyRef Name="nPartyNo" />
+            </Principal>
+            <Dependent Role="tPartyMember">
+              <PropertyRef Name="nPartyNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tPetSkill__nPetK__0EF836A4">
+          <End Role="tPet" Type="CharacterModel.tPet" Multiplicity="1" />
+          <End Role="tPetSkill" Type="CharacterModel.tPetSkill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tPet">
+              <PropertyRef Name="nPetKey" />
+            </Principal>
+            <Dependent Role="tPetSkill">
+              <PropertyRef Name="nPetKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CharacterModelStoreContainer" CdmEntityContainer="CharacterEntities">
+          <EntitySetMapping Name="tCharacters"><EntityTypeMapping TypeName="CharacterModel.tCharacter"><MappingFragment StoreEntitySet="tCharacter">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="sID" ColumnName="sID" />
+            <ScalarProperty Name="nUserNo" ColumnName="nUserNo" />
+            <ScalarProperty Name="nAdminLevel" ColumnName="nAdminLevel" />
+            <ScalarProperty Name="nPS" ColumnName="nPS" />
+            <ScalarProperty Name="nGS" ColumnName="nGS" />
+            <ScalarProperty Name="dCreateDate" ColumnName="dCreateDate" />
+            <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+            <ScalarProperty Name="nLoginZoneX" ColumnName="nLoginZoneX" />
+            <ScalarProperty Name="nLoginZoneY" ColumnName="nLoginZoneY" />
+            <ScalarProperty Name="nLoginZoneD" ColumnName="nLoginZoneD" />
+            <ScalarProperty Name="nPKYellowTime" ColumnName="nPKYellowTime" />
+            <ScalarProperty Name="dDeletedDate" ColumnName="dDeletedDate" />
+            <ScalarProperty Name="nAP" ColumnName="nAP" />
+            <ScalarProperty Name="sLoginZone" ColumnName="sLoginZone" />
+            <ScalarProperty Name="nPKCount" ColumnName="nPKCount" />
+            <ScalarProperty Name="nLevel" ColumnName="nLevel" />
+            <ScalarProperty Name="nExp" ColumnName="nExp" />
+            <ScalarProperty Name="nSlotNo" ColumnName="nSlotNo" />
+            <ScalarProperty Name="nHP" ColumnName="nHP" />
+            <ScalarProperty Name="nSP" ColumnName="nSP" />
+            <ScalarProperty Name="nHPS" ColumnName="nHPS" />
+            <ScalarProperty Name="nSPS" ColumnName="nSPS" />
+            <ScalarProperty Name="dLastLoginDate" ColumnName="dLastLoginDate" />
+            <ScalarProperty Name="nLoginCount" ColumnName="nLoginCount" />
+            <ScalarProperty Name="nCreateWorld" ColumnName="nCreateWorld" />
+            <ScalarProperty Name="nFame" ColumnName="nFame" />
+            <ScalarProperty Name="nPrisonMin" ColumnName="nPrisonMin" />
+            <ScalarProperty Name="nPlayMin" ColumnName="nPlayMin" />
+            <ScalarProperty Name="nFlags" ColumnName="nFlags" />
+            <ScalarProperty Name="nMoney" ColumnName="nMoney" />
+            <ScalarProperty Name="nStrength" ColumnName="nStrength" />
+            <ScalarProperty Name="nConstitute" ColumnName="nConstitute" />
+            <ScalarProperty Name="nDexterity" ColumnName="nDexterity" />
+            <ScalarProperty Name="nIntelligence" ColumnName="nIntelligence" />
+            <ScalarProperty Name="nMentalPower" ColumnName="nMentalPower" />
+            <ScalarProperty Name="nRedistributePoint" ColumnName="nRedistributePoint" />
+            <ScalarProperty Name="nKQHandle" ColumnName="nKQHandle" />
+            <ScalarProperty Name="sKQMap" ColumnName="sKQMap" />
+            <ScalarProperty Name="nKQX" ColumnName="nKQX" />
+            <ScalarProperty Name="nKQY" ColumnName="nKQY" />
+            <ScalarProperty Name="nKQD" ColumnName="nKQD" />
+            <ScalarProperty Name="dKQDate" ColumnName="dKQDate" />
+            <ScalarProperty Name="RNCS" ColumnName="RNCS" />
+            <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+            <ScalarProperty Name="PlayTime" ColumnName="PlayTime" />
+            <ScalarProperty Name="PDTIME" ColumnName="PDTIME" />
+            <ScalarProperty Name="XDTIME" ColumnName="XDTIME" />
+            <ScalarProperty Name="ZSCS" ColumnName="ZSCS" />
+            <ScalarProperty Name="ZSTime" ColumnName="ZSTime" />
+            <ScalarProperty Name="GDDS" ColumnName="GDDS" />
+            <ScalarProperty Name="ZSPOINT" ColumnName="ZSPOINT" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tCharacterChargedBuffers"><EntityTypeMapping TypeName="CharacterModel.tCharacterChargedBuffer"><MappingFragment StoreEntitySet="tCharacterChargedBuffer">
+            <ScalarProperty Name="nNo" ColumnName="nNo" />
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nKey" ColumnName="nKey" />
+            <ScalarProperty Name="nID" ColumnName="nID" />
+            <ScalarProperty Name="dUseDate" ColumnName="dUseDate" />
+            <ScalarProperty Name="dEndDate" ColumnName="dEndDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tCharacterOptions"><EntityTypeMapping TypeName="CharacterModel.tCharacterOption"><MappingFragment StoreEntitySet="tCharacterOptions">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="sShortCutData" ColumnName="sShortCutData" />
+            <ScalarProperty Name="sShortCutSize" ColumnName="sShortCutSize" />
+            <ScalarProperty Name="sVideo" ColumnName="sVideo" />
+            <ScalarProperty Name="sSound" ColumnName="sSound" />
+            <ScalarProperty Name="sGame" ColumnName="sGame" />
+            <ScalarProperty Name="sWindowsPos" ColumnName="sWindowsPos" />
+            <ScalarProperty Name="sKeyMapping" ColumnName="sKeyMapping" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tCharacterShapes"><EntityTypeMapping TypeName="CharacterModel.tCharacterShape"><MappingFragment StoreEntitySet="tCharacterShape">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nClass" ColumnName="nClass" />
+            <ScalarProperty Name="nRace" ColumnName="nRace" />
+            <ScalarProperty Name="nGender" ColumnName="nGender" />
+            <ScalarProperty Name="nHairType" ColumnName="nHairType" />
+            <ScalarProperty Name="nHairColor" ColumnName="nHairColor" />
+            <ScalarProperty Name="nFaceShape" ColumnName="nFaceShape" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tCharacterStates"><EntityTypeMapping TypeName="CharacterModel.tCharacterState"><MappingFragment StoreEntitySet="tCharacterState">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nStateNo" ColumnName="nStateNo" />
+            <ScalarProperty Name="nStateLevel" ColumnName="nStateLevel" />
+            <ScalarProperty Name="nStateTime" ColumnName="nStateTime" />
+            <ScalarProperty Name="nStateCount" ColumnName="nStateCount" />
+            <ScalarProperty Name="nStatePowerDemage" ColumnName="nStatePowerDemage" />
+            <ScalarProperty Name="nStatePowerSP" ColumnName="nStatePowerSP" />
+            <ScalarProperty Name="nStatePowerKeepTime" ColumnName="nStatePowerKeepTime" />
+            <ScalarProperty Name="nStatePowerCoolTime" ColumnName="nStatePowerCoolTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tCharacterTitles"><EntityTypeMapping TypeName="CharacterModel.tCharacterTitle"><MappingFragment StoreEntitySet="tCharacterTitle">
+            <ScalarProperty Name="nNo" ColumnName="nNo" />
+            <ScalarProperty Name="dDate" ColumnName="dDate" />
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nType" ColumnName="nType" />
+            <ScalarProperty Name="nElementNo" ColumnName="nElementNo" />
+            <ScalarProperty Name="nElementValue" ColumnName="nElementValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tFriends"><EntityTypeMapping TypeName="CharacterModel.tFriend"><MappingFragment StoreEntitySet="tFriend">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nFriendCharNo" ColumnName="nFriendCharNo" />
+            <ScalarProperty Name="nFlags" ColumnName="nFlags" />
+            <ScalarProperty Name="dDate" ColumnName="dDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tGuilds"><EntityTypeMapping TypeName="CharacterModel.tGuild"><MappingFragment StoreEntitySet="tGuild">
+            <ScalarProperty Name="nNo" ColumnName="nNo" />
+            <ScalarProperty Name="sName" ColumnName="sName" />
+            <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+            <ScalarProperty Name="nMaxMembers" ColumnName="nMaxMembers" />
+            <ScalarProperty Name="nMoney" ColumnName="nMoney" />
+            <ScalarProperty Name="nType" ColumnName="nType" />
+            <ScalarProperty Name="nGrade" ColumnName="nGrade" />
+            <ScalarProperty Name="nFame" ColumnName="nFame" />
+            <ScalarProperty Name="nStoneLevel" ColumnName="nStoneLevel" />
+            <ScalarProperty Name="nExp" ColumnName="nExp" />
+            <ScalarProperty Name="dCreateDate" ColumnName="dCreateDate" />
+            <ScalarProperty Name="dWarRequestDate" ColumnName="dWarRequestDate" />
+            <ScalarProperty Name="dWarStartDate" ColumnName="dWarStartDate" />
+            <ScalarProperty Name="dWarEndDate" ColumnName="dWarEndDate" />
+            <ScalarProperty Name="nWarEnemy" ColumnName="nWarEnemy" />
+            <ScalarProperty Name="nWarWinCount" ColumnName="nWarWinCount" />
+            <ScalarProperty Name="nWarLoseCount" ColumnName="nWarLoseCount" />
+            <ScalarProperty Name="nWarDrawCount" ColumnName="nWarDrawCount" />
+            <ScalarProperty Name="nDismissStatus" ColumnName="nDismissStatus" />
+            <ScalarProperty Name="dDismissDate" ColumnName="dDismissDate" />
+            <ScalarProperty Name="sIntro" ColumnName="sIntro" />
+            <ScalarProperty Name="dNotifyDate" ColumnName="dNotifyDate" />
+            <ScalarProperty Name="sNotifyCharID" ColumnName="sNotifyCharID" />
+            <ScalarProperty Name="sNotify" ColumnName="sNotify" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tGuildMembers"><EntityTypeMapping TypeName="CharacterModel.tGuildMember"><MappingFragment StoreEntitySet="tGuildMember">
+            <ScalarProperty Name="nNo" ColumnName="nNo" />
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="dJoinDate" ColumnName="dJoinDate" />
+            <ScalarProperty Name="nGrade" ColumnName="nGrade" />
+            <ScalarProperty Name="nFlags" ColumnName="nFlags" />
+            <ScalarProperty Name="nExpRatio" ColumnName="nExpRatio" />
+            <ScalarProperty Name="sIntro" ColumnName="sIntro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tGuildTournaments"><EntityTypeMapping TypeName="CharacterModel.tGuildTournament"><MappingFragment StoreEntitySet="tGuildTournament">
+            <ScalarProperty Name="nGTNo" ColumnName="nGTNo" />
+            <ScalarProperty Name="nType" ColumnName="nType" />
+            <ScalarProperty Name="nData" ColumnName="nData" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tItems"><EntityTypeMapping TypeName="CharacterModel.tItem"><MappingFragment StoreEntitySet="tItem">
+            <ScalarProperty Name="nItemKey" ColumnName="nItemKey" />
+            <ScalarProperty Name="nStorageType" ColumnName="nStorageType" />
+            <ScalarProperty Name="nOwner" ColumnName="nOwner" />
+            <ScalarProperty Name="nStorage" ColumnName="nStorage" />
+            <ScalarProperty Name="nItemID" ColumnName="nItemID" />
+            <ScalarProperty Name="nFlags" ColumnName="nFlags" />
+            <ScalarProperty Name="dDate" ColumnName="dDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tItemMobLists"><EntityTypeMapping TypeName="CharacterModel.tItemMobList"><MappingFragment StoreEntitySet="tItemMobList">
+            <ScalarProperty Name="nItemKey" ColumnName="nItemKey" />
+            <ScalarProperty Name="nMobID" ColumnName="nMobID" />
+            <ScalarProperty Name="nGrade" ColumnName="nGrade" />
+            <ScalarProperty Name="nKillCount" ColumnName="nKillCount" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tItemOptions"><EntityTypeMapping TypeName="CharacterModel.tItemOption"><MappingFragment StoreEntitySet="tItemOptions">
+            <ScalarProperty Name="nItemKey" ColumnName="nItemKey" />
+            <ScalarProperty Name="nOptionType" ColumnName="nOptionType" />
+            <ScalarProperty Name="nOptionData" ColumnName="nOptionData" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tItemTitles"><EntityTypeMapping TypeName="CharacterModel.tItemTitle"><MappingFragment StoreEntitySet="tItemTitle">
+            <ScalarProperty Name="nItemKey" ColumnName="nItemKey" />
+            <ScalarProperty Name="nTitleType" ColumnName="nTitleType" />
+            <ScalarProperty Name="sTitle" ColumnName="sTitle" />
+            <ScalarProperty Name="nTitleCharNo" ColumnName="nTitleCharNo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tKingdomQuests"><EntityTypeMapping TypeName="CharacterModel.tKingdomQuest"><MappingFragment StoreEntitySet="tKingdomQuest">
+            <ScalarProperty Name="nQuestNo" ColumnName="nQuestNo" />
+            <ScalarProperty Name="sData" ColumnName="sData" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tMarriages"><EntityTypeMapping TypeName="CharacterModel.tMarriage"><MappingFragment StoreEntitySet="tMarriage">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nPartnerCharNo" ColumnName="nPartnerCharNo" />
+            <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+            <ScalarProperty Name="nSubStatus" ColumnName="nSubStatus" />
+            <ScalarProperty Name="dWhen" ColumnName="dWhen" />
+            <ScalarProperty Name="dSubWhen" ColumnName="dSubWhen" />
+            <ScalarProperty Name="nMarriageCount" ColumnName="nMarriageCount" />
+            <ScalarProperty Name="nDivorceCancel" ColumnName="nDivorceCancel" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tMasterPupils"><EntityTypeMapping TypeName="CharacterModel.tMasterPupil"><MappingFragment StoreEntitySet="tMasterPupils">
+            <ScalarProperty Name="nPupils" ColumnName="nPupils" />
+            <ScalarProperty Name="nMaster" ColumnName="nMaster" />
+            <ScalarProperty Name="nFlags" ColumnName="nFlags" />
+            <ScalarProperty Name="dRegDate" ColumnName="dRegDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tMiniHouses"><EntityTypeMapping TypeName="CharacterModel.tMiniHouse"><MappingFragment StoreEntitySet="tMiniHouse">
+            <ScalarProperty Name="nListNo" ColumnName="nListNo" />
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="sData" ColumnName="sData" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tParties"><EntityTypeMapping TypeName="CharacterModel.tParty"><MappingFragment StoreEntitySet="tParty">
+            <ScalarProperty Name="nFlags" ColumnName="nFlags" />
+            <ScalarProperty Name="nMasterCharNo" ColumnName="nMasterCharNo" />
+            <ScalarProperty Name="nPartyNo" ColumnName="nPartyNo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tPartyMembers"><EntityTypeMapping TypeName="CharacterModel.tPartyMember"><MappingFragment StoreEntitySet="tPartyMember">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nFlag" ColumnName="nFlag" />
+            <ScalarProperty Name="nPartyNo" ColumnName="nPartyNo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tPets"><EntityTypeMapping TypeName="CharacterModel.tPet"><MappingFragment StoreEntitySet="tPet">
+            <ScalarProperty Name="nStorage" ColumnName="nStorage" />
+            <ScalarProperty Name="nPetNumber" ColumnName="nPetNumber" />
+            <ScalarProperty Name="nOwner" ColumnName="nOwner" />
+            <ScalarProperty Name="nPetKey" ColumnName="nPetKey" />
+            <ScalarProperty Name="nPetID" ColumnName="nPetID" />
+            <ScalarProperty Name="sInfo" ColumnName="sInfo" />
+            <ScalarProperty Name="nFlags" ColumnName="nFlags" />
+            <ScalarProperty Name="nAssignName" ColumnName="nAssignName" />
+            <ScalarProperty Name="nLevel" ColumnName="nLevel" />
+            <ScalarProperty Name="nExp" ColumnName="nExp" />
+            <ScalarProperty Name="nSatiety" ColumnName="nSatiety" />
+            <ScalarProperty Name="nSpeed" ColumnName="nSpeed" />
+            <ScalarProperty Name="nAbilityType" ColumnName="nAbilityType" />
+            <ScalarProperty Name="nAbilityValue" ColumnName="nAbilityValue" />
+            <ScalarProperty Name="nSkinColor" ColumnName="nSkinColor" />
+            <ScalarProperty Name="dDate" ColumnName="dDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tPetSkills"><EntityTypeMapping TypeName="CharacterModel.tPetSkill"><MappingFragment StoreEntitySet="tPetSkill">
+            <ScalarProperty Name="nSkillLevel" ColumnName="nSkillLevel" />
+            <ScalarProperty Name="nSkillNo" ColumnName="nSkillNo" />
+            <ScalarProperty Name="nSkillExp" ColumnName="nSkillExp" />
+            <ScalarProperty Name="nPetKey" ColumnName="nPetKey" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tPrisons"><EntityTypeMapping TypeName="CharacterModel.tPrison"><MappingFragment StoreEntitySet="tPrison">
+            <ScalarProperty Name="nPrisonNum" ColumnName="nPrisonNum" />
+            <ScalarProperty Name="nCharID" ColumnName="nCharID" />
+            <ScalarProperty Name="dPrisonDate" ColumnName="dPrisonDate" />
+            <ScalarProperty Name="nMinute" ColumnName="nMinute" />
+            <ScalarProperty Name="sReason" ColumnName="sReason" />
+            <ScalarProperty Name="nRegNumber" ColumnName="nRegNumber" />
+            <ScalarProperty Name="sGmID" ColumnName="sGmID" />
+            <ScalarProperty Name="sRemark" ColumnName="sRemark" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tQuests"><EntityTypeMapping TypeName="CharacterModel.tQuest"><MappingFragment StoreEntitySet="tQuest">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nQuestNo" ColumnName="nQuestNo" />
+            <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+            <ScalarProperty Name="sData" ColumnName="sData" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tSkills"><EntityTypeMapping TypeName="CharacterModel.tSkill"><MappingFragment StoreEntitySet="tSkill">
+            <ScalarProperty Name="nCharNo" ColumnName="nCharNo" />
+            <ScalarProperty Name="nSkillNo" ColumnName="nSkillNo" />
+            <ScalarProperty Name="nSkillLevel" ColumnName="nSkillLevel" />
+            <ScalarProperty Name="nSkillExp" ColumnName="nSkillExp" />
+            <ScalarProperty Name="nSkillWriteTime" ColumnName="nSkillWriteTime" />
+            <ScalarProperty Name="nSkillCoolTime" ColumnName="nSkillCoolTime" />
+            <ScalarProperty Name="nSkillPowerDemage" ColumnName="nSkillPowerDemage" />
+            <ScalarProperty Name="nSkillPowerSP" ColumnName="nSkillPowerSP" />
+            <ScalarProperty Name="nSkillPowerKeepTime" ColumnName="nSkillPowerKeepTime" />
+            <ScalarProperty Name="nSkillPowerCoolTime" ColumnName="nSkillPowerCoolTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tUserMoneys"><EntityTypeMapping TypeName="CharacterModel.tUserMoney"><MappingFragment StoreEntitySet="tUserMoney">
+            <ScalarProperty Name="nUserNo" ColumnName="nUserNo" />
+            <ScalarProperty Name="nUserMoney" ColumnName="nUserMoney" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Character">
+        <EntityTypeShape EntityType="CharacterModel.tCharacter" Width="1.5" PointX="5.75" PointY="1.375" Height="11.403056640625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tCharacterChargedBuffer" Width="1.5" PointX="8" PointY="4.375" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tCharacterOption" Width="1.5" PointX="0.75" PointY="9.75" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tCharacterShape" Width="1.5" PointX="2.75" PointY="9.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tCharacterState" Width="1.5" PointX="12.75" PointY="9.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tCharacterTitle" Width="1.5" PointX="8" PointY="7.5" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tFriend" Width="1.5" PointX="0.75" PointY="13.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tGuild" Width="1.5" PointX="7.75" PointY="11.125" Height="5.8263151041666728" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tGuildMember" Width="1.5" PointX="10" PointY="12.75" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tGuildTournament" Width="1.5" PointX="2.75" PointY="13.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tItem" Width="1.5" PointX="0.75" PointY="3.375" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tItemMobList" Width="1.5" PointX="3" PointY="1.125" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tItemOption" Width="1.5" PointX="3" PointY="3.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tItemTitle" Width="1.5" PointX="3" PointY="6.5" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tKingdomQuest" Width="1.5" PointX="4.75" PointY="13.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tMarriage" Width="1.5" PointX="12.75" PointY="13.75" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tMasterPupil" Width="1.5" PointX="14.75" PointY="9.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tMiniHouse" Width="1.5" PointX="14.75" PointY="12.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tParty" Width="1.5" PointX="10.75" PointY="6.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tPartyMember" Width="1.5" PointX="13" PointY="6.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tPet" Width="1.5" PointX="10.75" PointY="1" Height="4.2879036458333282" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tPetSkill" Width="1.5" PointX="13" PointY="2.25" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tPrison" Width="1.5" PointX="15.75" PointY="0.75" Height="2.5571907552083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tQuest" Width="1.5" PointX="15.75" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tSkill" Width="1.5" PointX="14.75" PointY="15.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="CharacterModel.tUserMoney" Width="1.5" PointX="0.75" PointY="16.75" Height="1.4033821614583246" IsExpanded="true" />
+        <AssociationConnector Association="CharacterModel.FK_tCharacterChargedBuffer_tCharacter" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="5.5574446614583328" />
+          <ConnectorPoint PointX="8" PointY="5.5574446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="CharacterModel.FK_tCharacterTitle_tCharacter" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="8.6824446614583337" />
+          <ConnectorPoint PointX="8" PointY="8.6824446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="CharacterModel.FK_tGuildMember_tGuild" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="14.028595377604166" />
+          <ConnectorPoint PointX="10" PointY="14.028595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="CharacterModel.FK__tItemMobL__nItem__2DD1C37F" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="3.375" />
+          <ConnectorPoint PointX="1.5" PointY="2.1151432291666694" />
+          <ConnectorPoint PointX="3" PointY="2.1151432291666694" />
+        </AssociationConnector>
+        <AssociationConnector Association="CharacterModel.FK__tItemOpti__nItem__2EC5E7B8" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.7689925130208337" />
+          <ConnectorPoint PointX="3" PointY="4.7689925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="CharacterModel.FK__tItemTitl__nItem__35A8BAC8" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="6.3167936197916674" />
+          <ConnectorPoint PointX="1.5" PointY="7.4901432291666694" />
+          <ConnectorPoint PointX="3" PointY="7.4901432291666694" />
+        </AssociationConnector>
+        <AssociationConnector Association="CharacterModel.FK__tPartyMem__nPart__2D7CBDC4" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="7.7689925130208337" />
+          <ConnectorPoint PointX="13" PointY="7.7689925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="CharacterModel.FK__tPetSkill__nPetK__0EF836A4" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="3.2401432291666623" />
+          <ConnectorPoint PointX="13" PointY="3.2401432291666623" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

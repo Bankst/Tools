@@ -1,0 +1,1 @@
+﻿public delegate void MultiObjectEvent<pObject1, pObject2>(pObject1 Object1, pObject2 Object2);
